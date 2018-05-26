@@ -20,7 +20,7 @@ class TwitterUtils
                 }
                 completion()
             }
-        }   
+        }
     }
     
     func tweet(team: String, yen:Int) {
@@ -29,7 +29,7 @@ class TwitterUtils
             let client = TWTRAPIClient(userID: userID)
             var clientError : NSError?
             let endPoint = "https://api.twitter.com/1.1/statuses/update.json"
-            let text = "\n\(team)に\(yen)円寄付しました. #tipay\n"
+            let text = "\n\(team)高校に\(yen)円寄付しました #tipay\n"
             let params = ["status" : text]
             
             let request = client.urlRequest(withMethod: "POST", urlString: endPoint, parameters: params, error: &clientError)
