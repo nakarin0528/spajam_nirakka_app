@@ -12,6 +12,7 @@ target 'nirakka' do
   # UI
   pod 'SnapKit'
   pod 'Material'
+  pod 'PagingMenuController'
 
   # API
   pod 'Alamofire'
