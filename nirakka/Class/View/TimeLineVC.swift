@@ -30,6 +30,15 @@ final class TimeLineVC: UIViewController {
 
         self.refetch()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+        
+        setupViews()
+        
+        self.refetch()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
