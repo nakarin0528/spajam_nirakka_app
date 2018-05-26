@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = StartVC()
         window?.makeKeyAndVisible()
         // TwitterKit
-        TWTRTwitter.sharedInstance().start(withConsumerKey:"gqC5hQB90FXVpETCFrtkqeqBA", consumerSecret: "oraHFHu3Od142O9uuJESKIsAugz1AMwTRlw78BQNPECCUINL0g")
+        TWTRTwitter.sharedInstance().start(withConsumerKey:"8hm8Zml20pIjHACYoHZpS1F1i", consumerSecret: "yTDG3VCDjeLYE5DQe99DnHRpUT6Mh2xSuyFRCMnPdXxivthPRs")
 
         return true
     }
