@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		93D916F6F53A85944C7CDBC6 /* Pods_nirakka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F3B6C71394106EACD93DA0 /* Pods_nirakka.framework */; };
 		DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F561720B915390058ADBD /* AppDelegate.swift */; };
-		DB9F561A20B915390058ADBD /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9F561920B915390058ADBD /* art.scnassets */; };
 		DB9F562120B9153A0058ADBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9F562020B9153A0058ADBD /* Assets.xcassets */; };
 		DB9F562420B9153A0058ADBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9F562220B9153A0058ADBD /* LaunchScreen.storyboard */; };
 		DB9F562E20B920E00058ADBD /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F562D20B920E00058ADBD /* StartVC.swift */; };
@@ -33,7 +32,6 @@
 		DBB30F9120B942E20023B308 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F9020B942E20023B308 /* AppExtension.swift */; };
 		DBB30F9520B9458E0023B308 /* GameDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F9420B9458E0023B308 /* GameDataCell.swift */; };
 		DBFC51BF20B973ED0022F40B /* VirtualObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51BE20B973ED0022F40B /* VirtualObjectNode.swift */; };
-		DBFC51C120B974180022F40B /* GameDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C020B974180022F40B /* GameDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +40,6 @@
 		30E3CE219D359DDE423B74BC /* Pods-nirakka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nirakka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nirakka/Pods-nirakka.debug.xcconfig"; sourceTree = "<group>"; };
 		DB9F561420B915390058ADBD /* nirakka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nirakka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9F561720B915390058ADBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB9F561920B915390058ADBD /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		DB9F562020B9153A0058ADBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB9F562320B9153A0058ADBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB9F562520B9153A0058ADBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,7 +64,6 @@
 		DBB30F9020B942E20023B308 /* AppExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
 		DBB30F9420B9458E0023B308 /* GameDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataCell.swift; sourceTree = "<group>"; };
 		DBFC51BE20B973ED0022F40B /* VirtualObjectNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectNode.swift; sourceTree = "<group>"; };
-		DBFC51C020B974180022F40B /* GameDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +122,6 @@
 				DBB30F5C20B9249C0023B308 /* NotoSansCJK-Medium.ttc */,
 				DBB30F5D20B924A30023B308 /* NotoSansCJK-Bold.ttc */,
 				DB9F561720B915390058ADBD /* AppDelegate.swift */,
-				DB9F561920B915390058ADBD /* art.scnassets */,
 				DB9F562B20B920B50058ADBD /* Class */,
 				DBB30F8920B9417F0023B308 /* Helper */,
 				DB9F562020B9153A0058ADBD /* Assets.xcassets */,
@@ -155,7 +150,6 @@
 				DBB30F7620B930960023B308 /* TimeLineVC.swift */,
 				DBB30F7820B930DE0023B308 /* SearchVC.swift */,
 				DBB30F7A20B931280023B308 /* TeamVC.swift */,
-				DBFC51C020B974180022F40B /* GameDetailVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,7 +263,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9F561A20B915390058ADBD /* art.scnassets in Resources */,
 				DBB30F5F20B925020023B308 /* NotoSansCJK-Medium.ttc in Resources */,
 				DBB30F5E20B925000023B308 /* NotoSansCJK-Bold.ttc in Resources */,
 				DB9F562420B9153A0058ADBD /* LaunchScreen.storyboard in Resources */,
@@ -387,7 +380,6 @@
 				DBB30F7520B92FE30023B308 /* ExUIIMage.swift in Sources */,
 				DBB30F6B20B928AA0023B308 /* TrackingState+Desription.swift in Sources */,
 				DBB30F8F20B942B40023B308 /* UIColor+App.swift in Sources */,
-				DBFC51C120B974180022F40B /* GameDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

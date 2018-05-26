@@ -32,7 +32,7 @@ final class TimeLineVC: UIViewController {
 
         // 引っ張って更新
         let refresh = UIRefreshControl()
-        refresh.tintColor = .blue
+        refresh.tintColor = .white
         if #available(iOS 10.0, *) {
             self.tableView.refreshControl = refresh
         } else {
@@ -76,9 +76,9 @@ final class TimeLineVC: UIViewController {
 extension TimeLineVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let vc = GameDetailVC()
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vc = GameDetailVC()
+//        vc.hidesBottomBarWhenPushed = true
+//        self.navigationController?.pushViewController(vc, animated: true)
 
     }
 
