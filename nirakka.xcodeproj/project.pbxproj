@@ -14,6 +14,7 @@
 		DB9F561F20B9153A0058ADBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9F561D20B9153A0058ADBD /* Main.storyboard */; };
 		DB9F562120B9153A0058ADBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9F562020B9153A0058ADBD /* Assets.xcassets */; };
 		DB9F562420B9153A0058ADBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9F562220B9153A0058ADBD /* LaunchScreen.storyboard */; };
+		DB9F562E20B920E00058ADBD /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F562D20B920E00058ADBD /* StartVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DB9F562020B9153A0058ADBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB9F562320B9153A0058ADBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB9F562520B9153A0058ADBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB9F562D20B920E00058ADBD /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +85,29 @@
 				DB9F561720B915390058ADBD /* AppDelegate.swift */,
 				DB9F561920B915390058ADBD /* art.scnassets */,
 				DB9F561B20B915390058ADBD /* ViewController.swift */,
+				DB9F562B20B920B50058ADBD /* Class */,
 				DB9F561D20B9153A0058ADBD /* Main.storyboard */,
 				DB9F562020B9153A0058ADBD /* Assets.xcassets */,
 				DB9F562220B9153A0058ADBD /* LaunchScreen.storyboard */,
 				DB9F562520B9153A0058ADBD /* Info.plist */,
 			);
 			path = nirakka;
+			sourceTree = "<group>";
+		};
+		DB9F562B20B920B50058ADBD /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				DB9F562C20B920C20058ADBD /* View */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		DB9F562C20B920C20058ADBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB9F562D20B920E00058ADBD /* StartVC.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +253,7 @@
 			files = (
 				DB9F561C20B915390058ADBD /* ViewController.swift in Sources */,
 				DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */,
+				DB9F562E20B920E00058ADBD /* StartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +401,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 922P3K9888;
 				INFOPLIST_FILE = nirakka/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nagezeni.nirakka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -397,7 +420,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 922P3K9888;
 				INFOPLIST_FILE = nirakka/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nagezeni.nirakka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
