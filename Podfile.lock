@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.7.0)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - FCAlertView (1.4.0)
   - Material (2.14.0):
     - Material/Core (= 2.14.0)
   - Material/Core (2.14.0):
@@ -20,6 +21,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - FCAlertView
   - Material
   - PagingMenuController
   - R.swift
@@ -30,6 +32,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  FCAlertView: fdddd63381898c1d1a5a20c9f084fbd2c6d12f8b
   Material: c5bea030f57d4b903c5284200bb612d571c9ec03
   Motion: 9f74d115d7f72bb5380a8e3cde2f8a1fc898ac36
   PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
@@ -39,6 +42,6 @@ SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: a298a7211940d9f5353605e10d72ca53cd6c461d
+PODFILE CHECKSUM: e81cd319c81aa97049afffa58acc55951756e26c
 
 COCOAPODS: 1.4.0

@@ -32,6 +32,11 @@
 		DBB30F9120B942E20023B308 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F9020B942E20023B308 /* AppExtension.swift */; };
 		DBB30F9520B9458E0023B308 /* GameDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F9420B9458E0023B308 /* GameDataCell.swift */; };
 		DBFC51BF20B973ED0022F40B /* VirtualObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51BE20B973ED0022F40B /* VirtualObjectNode.swift */; };
+		DBFC51C320B9C5CB0022F40B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C220B9C5CB0022F40B /* Constant.swift */; };
+		DBFC51C520B9C6A30022F40B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C420B9C6A30022F40B /* Log.swift */; };
+		DBFC51C720B9C70C0022F40B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C620B9C70C0022F40B /* Alert.swift */; };
+		DBFC51C920B9C7AD0022F40B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C820B9C7AC0022F40B /* Helper.swift */; };
+		DBFC51CB20B9CC940022F40B /* GameDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		DBB30F9020B942E20023B308 /* AppExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
 		DBB30F9420B9458E0023B308 /* GameDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataCell.swift; sourceTree = "<group>"; };
 		DBFC51BE20B973ED0022F40B /* VirtualObjectNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectNode.swift; sourceTree = "<group>"; };
+		DBFC51C220B9C5CB0022F40B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		DBFC51C420B9C6A30022F40B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		DBFC51C620B9C70C0022F40B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		DBFC51C820B9C7AC0022F40B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +160,7 @@
 				DBB30F7620B930960023B308 /* TimeLineVC.swift */,
 				DBB30F7820B930DE0023B308 /* SearchVC.swift */,
 				DBB30F7A20B931280023B308 /* TeamVC.swift */,
+				DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,7 +186,11 @@
 		DBB30F8920B9417F0023B308 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				DBFC51C820B9C7AC0022F40B /* Helper.swift */,
+				DBFC51C620B9C70C0022F40B /* Alert.swift */,
 				DBB30F8A20B941920023B308 /* iPhoneSize.swift */,
+				DBFC51C220B9C5CB0022F40B /* Constant.swift */,
+				DBFC51C420B9C6A30022F40B /* Log.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -282,6 +297,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-nirakka/Pods-nirakka-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/FCAlertView/FCAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/PagingMenuController/PagingMenuController.framework",
@@ -294,6 +310,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagingMenuController.framework",
@@ -363,23 +380,28 @@
 				DBB30F7120B92ACF0023B308 /* TabBarController.swift in Sources */,
 				DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */,
 				DBFC51BF20B973ED0022F40B /* VirtualObjectNode.swift in Sources */,
+				DBFC51C720B9C70C0022F40B /* Alert.swift in Sources */,
 				DBB30F8B20B941920023B308 /* iPhoneSize.swift in Sources */,
 				DBB30F8320B93CBB0023B308 /* GameData.swift in Sources */,
 				DB9F562E20B920E00058ADBD /* StartVC.swift in Sources */,
 				DBB30F9520B9458E0023B308 /* GameDataCell.swift in Sources */,
 				DBB30F7F20B93C480023B308 /* CollectionView.swift in Sources */,
 				DBB30F8820B93F5D0023B308 /* TimeLineModel.swift in Sources */,
+				DBFC51C520B9C6A30022F40B /* Log.swift in Sources */,
 				DBB30F7720B930960023B308 /* TimeLineVC.swift in Sources */,
 				DBB30F6D20B928AA0023B308 /* ExUIViewController.swift in Sources */,
 				DBB30F8520B93D800023B308 /* SkeletonCollectionViewCell.swift in Sources */,
 				DBB30F7320B92ED00023B308 /* R.generated.swift in Sources */,
 				DBB30F8120B93C500023B308 /* CollectionViewCell.swift in Sources */,
+				DBFC51C320B9C5CB0022F40B /* Constant.swift in Sources */,
 				DBB30F7920B930DE0023B308 /* SearchVC.swift in Sources */,
+				DBFC51CB20B9CC940022F40B /* GameDetailVC.swift in Sources */,
 				DBB30F9120B942E20023B308 /* AppExtension.swift in Sources */,
 				DBB30F7B20B931280023B308 /* TeamVC.swift in Sources */,
 				DBB30F7520B92FE30023B308 /* ExUIIMage.swift in Sources */,
 				DBB30F6B20B928AA0023B308 /* TrackingState+Desription.swift in Sources */,
 				DBB30F8F20B942B40023B308 /* UIColor+App.swift in Sources */,
+				DBFC51C920B9C7AD0022F40B /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

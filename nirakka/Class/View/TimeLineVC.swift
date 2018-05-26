@@ -47,22 +47,19 @@ final class TimeLineVC: UIViewController {
 
     //テーブルビュー引っ張り時の呼び出しメソッド
     @objc func refreshTable(_ refreshControl: UIRefreshControl){
-//        self.refetch(refreshControl: refreshControl)
+        self.refetch(refreshControl: refreshControl)
     }
 
     func refetch(refreshControl: UIRefreshControl? = nil) {
-//        self.model.timeLineData.removeAll()
-//        self.model.searchNextPage = 0
-//        self.model.reloadFlg = true
-//        self.model.fetchDatas { [weak self] isSuccess in
-//            self?.isFirstFetched = false
-//            self?.timeLineView.reloadData()
-//            //読込中の表示を消す。
-//            if let refreshControl = refreshControl {
-//                refreshControl.endRefreshing()
-//            }
-//            self?.timeLineView.backgroundColor = UIColor.app.scrollViewBackgroundColor
-//        }
+        self.model.timeLineData.removeAll()
+        self.model.fetchDatas { [weak self] isSuccess in
+            self?.isFirstFetched = false
+            self?.tableView.reloadData()
+            //読込中の表示を消す。
+            if let refreshControl = refreshControl {
+                refreshControl.endRefreshing()
+            }
+        }
     }
 
     private func setupViews() {
@@ -75,31 +72,19 @@ final class TimeLineVC: UIViewController {
 
 extension TimeLineVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
 //        let vc = GameDetailVC()
 //        vc.hidesBottomBarWhenPushed = true
 //        self.navigationController?.pushViewController(vc, animated: true)
-
+        
     }
 
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-
-        // 追加読み込み
-//        if self.model.reloadFlg == false { return }
-//        let currentOffsetY = scrollView.contentOffset.y
-//        let maximumOffset = scrollView.contentSize.height - scrollView.frame.height
-//        let distanceToBottom = maximumOffset - currentOffsetY
-//        if distanceToBottom < 500 {
-//
-//        }
-    }
 }
 
 extension TimeLineVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameDataCell") as? GameDataCell ?? GameDataCell()
-//        cell.configure(self.model.timeLineData[indexPath.row])
+        cell.configure(self.model.timeLineData[indexPath.row])
 
         return cell
     }
@@ -108,7 +93,7 @@ extension TimeLineVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection _: Int) -> Int {
         // ローディング用の処理追加する todo
 
-        return 10
+        return self.model.timeLineData.count
     }
 }
 

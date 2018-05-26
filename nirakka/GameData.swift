@@ -1,8 +1,11 @@
 import SwiftyJSON
 
 struct GameData {
-    var id = 0
-    var userID = 0
+    var gameId = 0
+    var startTime = ""
+    var place = ""
+    var teamA = Team()
+    var teamB = Team()
     var comment = ""
     var imageURL = URL(string: "")
     var isSaved: Bool? = nil
@@ -10,28 +13,45 @@ struct GameData {
     var createdAt = ""
     var updatedAt = ""
     var cacheImage: UIImage? = nil
+    var isDone = false
+    
 
     init() {
     }
 
     init(_ json: JSON) {
-        self.id = json["id"].intValue
-        self.userID = json["user_id"].intValue
-        self.comment = json["text"].stringValue
-        self.imageURL = URL(string: json["image_url"].stringValue)
-        self.createdAt = json["created_at"].stringValue
-        self.updatedAt = json["updated_at"].stringValue
+        self.gameId = json["id"].intValue
+        self.startTime = json["start_time"].stringValue
+        self.place = json["place"].stringValue
+        self.teamA = Team(json["team_a"])
+        self.teamB = Team(json["team_b"])
+        self.isDone = json["result"].stringValue != "null"
+        if self.isDone {
+
+        }
+    }
+}
+
+struct Team {
+    var name = ""
+    var id = 0
+
+    init() {
     }
 
-    // API完成まで使用
-    init(url: URL?, isSaved: Bool? = nil) {
-        self.imageURL = url
-        self.isSaved = isSaved
+    init(_ json: JSON) {
+        name = json["name"].stringValue
+        id = json["id"].intValue
     }
-    
-    // アップロード中に暫定的に表示するためのイニシャライザ
-    init(cacheImage:UIImage) {
-        self.cacheImage = cacheImage
-    }
+}
 
+struct Result {
+    var id = 0
+    var gameID = 0
+    var scoreA = 0
+    var scoreB = 0
+
+    init(_ json: JSON) {
+
+    }
 }

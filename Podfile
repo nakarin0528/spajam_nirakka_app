@@ -14,6 +14,7 @@ target 'nirakka' do
   pod 'Material'
   pod 'PagingMenuController'
   pod "SkeletonView"
+  pod 'FCAlertView'
 
   # API
   pod 'Alamofire'

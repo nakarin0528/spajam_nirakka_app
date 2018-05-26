@@ -3,7 +3,7 @@ import SnapKit
 
 final class GameDataCell: UITableViewCell {
 
-    private let bgView: UIView = {
+    private var bgView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 5
@@ -13,7 +13,7 @@ final class GameDataCell: UITableViewCell {
         return view
     }()
 
-    private let teamLabel1: UILabel = {
+    private var teamLabel1: UILabel = {
         let label = UILabel()
         label.text = "広陵"
         label.font = UIFont(name: "NotoSansCJKjp-Medium", size: 24)
@@ -23,7 +23,7 @@ final class GameDataCell: UITableViewCell {
         return label
     }()
 
-    private let teamLabel2: UILabel = {
+    private var teamLabel2: UILabel = {
         let label = UILabel()
         label.text = "花咲徳栄"
         label.font = UIFont(name: "NotoSansCJKjp-Medium", size: 24)
@@ -33,7 +33,7 @@ final class GameDataCell: UITableViewCell {
         return label
     }()
 
-    private let vsLabel: UILabel = {
+    private var vsLabel: UILabel = {
         let label = UILabel()
         label.text = "VS"
         label.font = .systemFont(ofSize: 18)
@@ -42,9 +42,17 @@ final class GameDataCell: UITableViewCell {
         return label
     }()
 
-    private let timeLabel: UILabel = {
+    private var timeLabel: UILabel = {
         let label = UILabel()
         label.text = "8月3日 10:00~"
+        label.font = .systemFont(ofSize: 14)
+        label.sizeToFit()
+        return label
+    }()
+
+    private var placeLabel: UILabel = {
+        let label = UILabel()
+        label.text = ""
         label.font = .systemFont(ofSize: 14)
         label.sizeToFit()
         return label
@@ -73,6 +81,7 @@ final class GameDataCell: UITableViewCell {
         bgView.addSubview(vsLabel)
         bgView.addSubview(teamLabel2)
         bgView.addSubview(timeLabel)
+        bgView.addSubview(placeLabel)
 
         bgView.snp.makeConstraints {
             $0.top.bottom.equalToSuperview().inset(10)
@@ -93,12 +102,19 @@ final class GameDataCell: UITableViewCell {
             $0.left.equalTo(vsLabel.snp.right).offset(10)
         }
         timeLabel.snp.makeConstraints {
+            $0.centerY.equalTo(placeLabel)
+            $0.right.equalTo(placeLabel.snp.left).offset(-15)
+        }
+        placeLabel.snp.makeConstraints {
             $0.bottom.equalToSuperview().inset(10)
             $0.right.equalToSuperview().inset(15)
         }
     }
 
     func configure(_ data: GameData) {
-
+        teamLabel1.text = data.teamA.name
+        teamLabel2.text = data.teamB.name
+        timeLabel.text = data.startTime
+        placeLabel.text = data.place
     }
 }
