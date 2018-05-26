@@ -41,15 +41,15 @@ final class TabBarController: UITabBarController {
 
         let tab1 = UINavigationController(rootViewController: genreVC)
         let image1 = R.image.home()?.resize(toWidth: 40)
-        tab1.tabBarItem = UITabBarItem(title: "", image: image1, tag: 1)
+        tab1.tabBarItem = UITabBarItem(title: "試合一覧", image: image1, tag: 1)
 
         let tab2 = UINavigationController(rootViewController: searchVC)
         let image2 = R.image.search()?.resize(toWidth: 40)
-        tab2.tabBarItem = UITabBarItem(title: "", image: image2, tag: 2)
+        tab2.tabBarItem = UITabBarItem(title: "検索", image: image2, tag: 2)
 
         let tab3 = UINavigationController(rootViewController: teamVC)
         let image3 = R.image.profile()?.resize(toWidth: 30)
-        tab3.tabBarItem = UITabBarItem(title: "", image: image3, tag: 3)
+        tab3.tabBarItem = UITabBarItem(title: "チーム一覧", image: image3, tag: 3)
 
         self.controllers = [
             tab1,

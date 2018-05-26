@@ -1,94 +1,31 @@
 import UIKit
-import PagingMenuController
+import SnapKit
 
 final class GenreVC: UIViewController {
 
-//    /* pagingMenuController */
-//    private let pagingMenuController:PagingMenuController
-//    private var viewControllers = [UIViewController]()
-//    private let
-//
-//    // 個別のメニューアイテムのカスタマイズ
-//    struct MenuItem: MenuItemViewCustomizable {
-//        var title = ""
-//        var displayMode: MenuItemDisplayMode {
-//            return .text(title: MenuItemText(text: title,
-//                                             color: UIColor(white: 100.0 / 255.0, alpha: 1.0),
-//                                             selectedColor: .black,
-//                                             font: UIFont(name: "HiraginoSans-W3", size: 12)!,
-//                                             selectedFont: UIFont(name: "HiraginoSans-W6", size: 15)!))
-//            // ※ colorは非選択時の、 selectedColorは選択時の文字色
-//        }
-//    }
-//    // メニュー全体のカスタマイズ
-//    struct MenuOptions: MenuViewCustomizable {
-//        // メニューのタイトルを設定
-//        var itemsOptions: [MenuItemViewCustomizable] {
-//            return [MenuItem(title: "マイポケット"), MenuItem(title: "リスト一覧")]
-//        }
-//
-//        var focusMode: MenuFocusMode {
-//            // アンダーライン
-//            return .underline(height: 3, color: UIColor.red, horizontalPadding: 0, verticalPadding: 1)
-//        }
-//
-//        var height: CGFloat {
-//            return 50
-//        }
-//
-//        // メニューの表示設定
-//        var displayMode: MenuDisplayMode {
-//            return .segmentedControl
-//        }
-//
-//        var animationDuration: TimeInterval {
-//            return 0.3
-//        }
-//    }
-//
-//    // 上記で定義したメニューのカスタマイズを適用、ページングするVCを設定
-//    struct PagingMenuOptions: PagingMenuControllerCustomizable {
-//        let controllers: [UIViewController]
-//        var componentType: ComponentType {
-//            return .all(menuOptions: MenuOptions(), pagingControllers: controllers)
-//        }
-//
-//        init (viewControllers: [UIViewController]) {
-//            self.controllers = viewControllers
-//        }
-//    }
-//
-//    init() {
-//        self.viewControllers = [myPocketVC, listListVC]
-//        self.pagingMenuController = PagingMenuController(options: PagingMenuOptions(viewControllers: self.viewControllers))
-//        super.init(nibName: nil, bundle: nil)
-//
-//        self.pagingMenuController.onMove = { state in
-//            switch state {
-//            case .didMoveController(_, _):
-//                // myPocketVCからlistListVCに遷移する時、キーボードを隠す
-//                self.myPocketVC.hideKeyboard()
-//                // ページを変えるときはシェアモードストップする
-//                self.quitShareMode()
-//            default:
-//                break
-//            }
-//        }
-//    }
     let model = TimeLineModel()
 
     private var isFirstFetched = false
 
-    lazy var timeLineView: CollectionView = {
-        let view = CollectionView(isTL: false)
-        view.delegate = self
-        view.dataSource = self
-        return view
+    private lazy var tableView: UITableView = {
+        let table = UITableView()
+        table.register(GameDataCell.self, forCellReuseIdentifier: "GameDataCell")
+//        table.register(SkeletonCell.self, forCellReuseIdentifier: "SkeletonCell")
+        table.estimatedRowHeight = 120
+        table.rowHeight = UITableViewAutomaticDimension
+        table.tableFooterView = UIView()
+        table.backgroundColor = UIColor.app.untWhiteTwo
+        table.separatorColor = .clear
+        table.keyboardDismissMode = .onDrag
+        table.delegate = self
+        table.dataSource = self
+        return table
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = UIColor.app.untWhiteTwo
+        title = "試合一覧"
 
         setupViews()
 
@@ -98,9 +35,9 @@ final class GenreVC: UIViewController {
         let refresh = UIRefreshControl()
         refresh.tintColor = .blue
         if #available(iOS 10.0, *) {
-            self.timeLineView.refreshControl = refresh
+            self.tableView.refreshControl = refresh
         } else {
-            self.timeLineView.backgroundView = refresh
+            self.tableView.backgroundView = refresh
         }
         refresh.addTarget(self, action: #selector(refreshTable), for: UIControlEvents.valueChanged)
     }
@@ -130,63 +67,51 @@ final class GenreVC: UIViewController {
     }
 
     private func setupViews() {
-        view.addSubview(timeLineView)
-        timeLineView.snp.makeConstraints {
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
 }
 
-extension GenreVC: UICollectionViewDataSource {
+extension GenreVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // ローディング用
-        if self.model.timeLineData.count == 0 && !self.isFirstFetched {
-            self.timeLineView.backgroundColor = .white
-            return 8
-        }
-        return self.model.timeLineData.count
+//            let detailVC = DetailVC()
+//            detailVC.hidesBottomBarWhenPushed = true
+//            self.navigationController?.pushViewController(detailVC, animated: true)
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if self.model.timeLineData.count == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SkeletonCollectionViewCell", for: indexPath) as! SkeletonCollectionViewCell
-            return cell
-        }
-
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        // TODO:リフレッシュした時にエラーが起きる
-        if self.model.timeLineData.count < indexPath.row {
-            return cell
-        }
-        var item = self.model.timeLineData[indexPath.row]
-        item.isSaved = false
-        cell.configure(data: item)
-        return cell
-    }
-}
-
-extension GenreVC: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        // 追加読み込み
+
+        // 追加読み込み
 //        if self.model.reloadFlg == false { return }
 //        let currentOffsetY = scrollView.contentOffset.y
 //        let maximumOffset = scrollView.contentSize.height - scrollView.frame.height
 //        let distanceToBottom = maximumOffset - currentOffsetY
 //        if distanceToBottom < 500 {
-//            self.model.fetchDatas { [weak self] _ in
-//                guard let `self` = self else { return }
-//                self.timeLineView.reloadData()
-//            }
+//
 //        }
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if self.model.timeLineData.count == 0 {
-//            return
-//        }
-//        let detailVC = DetailVC(image: cell.photoImageView.image, screenShotData: self.model.timeLineData[indexPath.row])
-//        detailVC.hidesBottomBarWhenPushed = true
-//        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
+
+extension GenreVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GameDataCell") as? GameDataCell ?? GameDataCell()
+//        cell.configure(self.model.timeLineData[indexPath.row])
+
+        return cell
+    }
+
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection _: Int) -> Int {
+        // ローディング用の処理追加する todo
+
+        return 10
+    }
+}
+
+
