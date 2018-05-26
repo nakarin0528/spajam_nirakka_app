@@ -1,7 +1,7 @@
 import UIKit
 
 final class TeamVC: UIViewController {
-    let model = TimeLineModel()
+    let model = TeamModel()
 
     private var isFirstFetched = false
 
@@ -38,22 +38,22 @@ final class TeamVC: UIViewController {
 
     //テーブルビュー引っ張り時の呼び出しメソッド
     @objc func refreshTable(_ refreshControl: UIRefreshControl){
-        //        self.refetch(refreshControl: refreshControl)
+                self.refetch(refreshControl: refreshControl)
     }
 
     func refetch(refreshControl: UIRefreshControl? = nil) {
-        //        self.model.timeLineData.removeAll()
-        //        self.model.searchNextPage = 0
-        //        self.model.reloadFlg = true
-        //        self.model.fetchDatas { [weak self] isSuccess in
-        //            self?.isFirstFetched = false
-        //            self?.timeLineView.reloadData()
-        //            //読込中の表示を消す。
-        //            if let refreshControl = refreshControl {
-        //                refreshControl.endRefreshing()
-        //            }
-        //            self?.timeLineView.backgroundColor = UIColor.app.scrollViewBackgroundColor
-        //        }
+                self.model.teamData.removeAll()
+//                self.model.searchNextPage = 0
+                self.model.reloadFlg = true
+                self.model.fetchDatas { [weak self] isSuccess in
+                    self?.isFirstFetched = false
+                    self?.timeLineView.reloadData()
+                    //読込中の表示を消す。
+                    if let refreshControl = refreshControl {
+                        refreshControl.endRefreshing()
+                    }
+                    self?.timeLineView.backgroundColor = UIColor.app.scrollViewBackgroundColor
+                }
     }
 
     private func setupViews() {
@@ -72,8 +72,8 @@ extension TeamVC: UICollectionViewDataSource {
 //            self.timeLineView.backgroundColor = .white
 //            return 8
 //        }
-//        return self.model.timeLineData.count
-        return 8
+        return self.model.teamData.count
+//        return 8
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -83,8 +83,8 @@ extension TeamVC: UICollectionViewDataSource {
 //        }
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-//        var item = self.model.timeLineData[indexPath.row]
-//        cell.configure(data: item)
+        var item = self.model.teamData[indexPath.row]
+        cell.configure(data: item)
         return cell
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8707DBEE20B9E1A200E4BC51 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8707DBED20B9E1A200E4BC51 /* TeamModel.swift */; };
+		8707DBF020B9E20900E4BC51 /* TeamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8707DBEF20B9E20900E4BC51 /* TeamData.swift */; };
 		93D916F6F53A85944C7CDBC6 /* Pods_nirakka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F3B6C71394106EACD93DA0 /* Pods_nirakka.framework */; };
 		DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F561720B915390058ADBD /* AppDelegate.swift */; };
 		DB9F562120B9153A0058ADBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9F562020B9153A0058ADBD /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		08F3B6C71394106EACD93DA0 /* Pods_nirakka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nirakka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F5728E5DF2DD06AD14AD27 /* Pods-nirakka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nirakka.release.xcconfig"; path = "Pods/Target Support Files/Pods-nirakka/Pods-nirakka.release.xcconfig"; sourceTree = "<group>"; };
 		30E3CE219D359DDE423B74BC /* Pods-nirakka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nirakka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nirakka/Pods-nirakka.debug.xcconfig"; sourceTree = "<group>"; };
+		8707DBED20B9E1A200E4BC51 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		8707DBEF20B9E20900E4BC51 /* TeamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamData.swift; sourceTree = "<group>"; };
 		DB9F561420B915390058ADBD /* nirakka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nirakka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9F561720B915390058ADBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB9F562020B9153A0058ADBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB30F8720B93F5D0023B308 /* TimeLineModel.swift */,
+				8707DBED20B9E1A200E4BC51 /* TeamModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				DBB30F8A20B941920023B308 /* iPhoneSize.swift */,
 				DBFC51C220B9C5CB0022F40B /* Constant.swift */,
 				DBFC51C420B9C6A30022F40B /* Log.swift */,
+				8707DBEF20B9E20900E4BC51 /* TeamData.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 				DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */,
 				DBFC51CD20B9D8E60022F40B /* R.generated.swift in Sources */,
 				DBFC51BF20B973ED0022F40B /* VirtualObjectNode.swift in Sources */,
+				8707DBF020B9E20900E4BC51 /* TeamData.swift in Sources */,
 				DBFC51C720B9C70C0022F40B /* Alert.swift in Sources */,
 				DBB30F8B20B941920023B308 /* iPhoneSize.swift in Sources */,
 				DBB30F8320B93CBB0023B308 /* GameData.swift in Sources */,
@@ -404,6 +411,7 @@
 				DBB30F8120B93C500023B308 /* CollectionViewCell.swift in Sources */,
 				DBFC51C320B9C5CB0022F40B /* Constant.swift in Sources */,
 				DBB30F7920B930DE0023B308 /* SearchVC.swift in Sources */,
+				8707DBEE20B9E1A200E4BC51 /* TeamModel.swift in Sources */,
 				DBFC51CB20B9CC940022F40B /* GameDetailVC.swift in Sources */,
 				DBB30F9120B942E20023B308 /* AppExtension.swift in Sources */,
 				DBB30F7B20B931280023B308 /* TeamVC.swift in Sources */,
