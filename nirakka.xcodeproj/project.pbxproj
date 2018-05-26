@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93D916F6F53A85944C7CDBC6 /* Pods_nirakka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F3B6C71394106EACD93DA0 /* Pods_nirakka.framework */; };
 		DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F561720B915390058ADBD /* AppDelegate.swift */; };
 		DB9F561A20B915390058ADBD /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9F561920B915390058ADBD /* art.scnassets */; };
 		DB9F561C20B915390058ADBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F561B20B915390058ADBD /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08F3B6C71394106EACD93DA0 /* Pods_nirakka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nirakka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21F5728E5DF2DD06AD14AD27 /* Pods-nirakka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nirakka.release.xcconfig"; path = "Pods/Target Support Files/Pods-nirakka/Pods-nirakka.release.xcconfig"; sourceTree = "<group>"; };
+		30E3CE219D359DDE423B74BC /* Pods-nirakka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nirakka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nirakka/Pods-nirakka.debug.xcconfig"; sourceTree = "<group>"; };
 		DB9F561420B915390058ADBD /* nirakka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nirakka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9F561720B915390058ADBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB9F561920B915390058ADBD /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D916F6F53A85944C7CDBC6 /* Pods_nirakka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E8AE7CF665BE828DBF5F299 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08F3B6C71394106EACD93DA0 /* Pods_nirakka.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FF609C94402A5493197864C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30E3CE219D359DDE423B74BC /* Pods-nirakka.debug.xcconfig */,
+				21F5728E5DF2DD06AD14AD27 /* Pods-nirakka.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DB9F560B20B915390058ADBD = {
 			isa = PBXGroup;
 			children = (
 				DB9F561620B915390058ADBD /* nirakka */,
 				DB9F561520B915390058ADBD /* Products */,
+				7FF609C94402A5493197864C /* Pods */,
+				4E8AE7CF665BE828DBF5F299 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB9F562820B9153A0058ADBD /* Build configuration list for PBXNativeTarget "nirakka" */;
 			buildPhases = (
+				98C250DA1400F97A68B92B47 /* [CP] Check Pods Manifest.lock */,
 				DB9F561020B915390058ADBD /* Sources */,
 				DB9F561120B915390058ADBD /* Frameworks */,
 				DB9F561220B915390058ADBD /* Resources */,
+				2D4323F022FC94F622BD687C /* [CP] Embed Pods Frameworks */,
+				541C7E051E958A399F819A6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D4323F022FC94F622BD687C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-nirakka/Pods-nirakka-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nirakka/Pods-nirakka-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		541C7E051E958A399F819A6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nirakka/Pods-nirakka-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98C250DA1400F97A68B92B47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nirakka-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DB9F561020B915390058ADBD /* Sources */ = {
@@ -282,15 +373,13 @@
 		};
 		DB9F562920B9153A0058ADBD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30E3CE219D359DDE423B74BC /* Pods-nirakka.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 922P3K9888;
 				INFOPLIST_FILE = nirakka/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nagezeni.nirakka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -300,15 +389,13 @@
 		};
 		DB9F562A20B9153A0058ADBD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21F5728E5DF2DD06AD14AD27 /* Pods-nirakka.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 922P3K9888;
 				INFOPLIST_FILE = nirakka/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nagezeni.nirakka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

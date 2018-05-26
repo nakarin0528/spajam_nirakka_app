@@ -1,0 +1,24 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+target 'nirakka' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for nirakka
+  # UI
+  pod 'SnapKit'
+  pod 'Material'
+
+  # API
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+
+  # ファイル管理
+  pod 'R.swift'
+
+
+end
