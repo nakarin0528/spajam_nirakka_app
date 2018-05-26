@@ -17,7 +17,6 @@
 		DBB30F6B20B928AA0023B308 /* TrackingState+Desription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F6620B928A90023B308 /* TrackingState+Desription.swift */; };
 		DBB30F6D20B928AA0023B308 /* ExUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F6820B928A90023B308 /* ExUIViewController.swift */; };
 		DBB30F7120B92ACF0023B308 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7020B92ACF0023B308 /* TabBarController.swift */; };
-		DBB30F7320B92ED00023B308 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7220B92ED00023B308 /* R.generated.swift */; };
 		DBB30F7520B92FE30023B308 /* ExUIIMage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7420B92FE30023B308 /* ExUIIMage.swift */; };
 		DBB30F7720B930960023B308 /* TimeLineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7620B930960023B308 /* TimeLineVC.swift */; };
 		DBB30F7920B930DE0023B308 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7820B930DE0023B308 /* SearchVC.swift */; };
@@ -37,6 +36,7 @@
 		DBFC51C720B9C70C0022F40B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C620B9C70C0022F40B /* Alert.swift */; };
 		DBFC51C920B9C7AD0022F40B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C820B9C7AC0022F40B /* Helper.swift */; };
 		DBFC51CB20B9CC940022F40B /* GameDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */; };
+		DBFC51CD20B9D8E60022F40B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51CC20B9D8E60022F40B /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +54,6 @@
 		DBB30F6620B928A90023B308 /* TrackingState+Desription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TrackingState+Desription.swift"; sourceTree = "<group>"; };
 		DBB30F6820B928A90023B308 /* ExUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIViewController.swift; sourceTree = "<group>"; };
 		DBB30F7020B92ACF0023B308 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		DBB30F7220B92ED00023B308 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		DBB30F7420B92FE30023B308 /* ExUIIMage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIIMage.swift; sourceTree = "<group>"; };
 		DBB30F7620B930960023B308 /* TimeLineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineVC.swift; sourceTree = "<group>"; };
 		DBB30F7820B930DE0023B308 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		DBFC51C620B9C70C0022F40B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		DBFC51C820B9C7AC0022F40B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailVC.swift; sourceTree = "<group>"; };
+		DBFC51CC20B9D8E60022F40B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				DBB30F9220B943220023B308 /* Extensions */,
-				DBB30F7220B92ED00023B308 /* R.generated.swift */,
 				DBB30F6520B9289C0023B308 /* common */,
 				DBB30F5C20B9249C0023B308 /* NotoSansCJK-Medium.ttc */,
 				DBB30F5D20B924A30023B308 /* NotoSansCJK-Bold.ttc */,
@@ -136,7 +135,6 @@
 				DBB30F8920B9417F0023B308 /* Helper */,
 				DB9F562020B9153A0058ADBD /* Assets.xcassets */,
 				DB9F562220B9153A0058ADBD /* LaunchScreen.storyboard */,
-				DBB30F8220B93CBB0023B308 /* GameData.swift */,
 				DB9F562520B9153A0058ADBD /* Info.plist */,
 			);
 			path = nirakka;
@@ -145,6 +143,7 @@
 		DB9F562B20B920B50058ADBD /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				DBFC51CC20B9D8E60022F40B /* R.generated.swift */,
 				DBB30F9320B9457E0023B308 /* Cell */,
 				DBB30F8620B93F530023B308 /* Model */,
 				DB9F562C20B920C20058ADBD /* View */,
@@ -186,6 +185,7 @@
 		DBB30F8920B9417F0023B308 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				DBB30F8220B93CBB0023B308 /* GameData.swift */,
 				DBFC51C820B9C7AC0022F40B /* Helper.swift */,
 				DBFC51C620B9C70C0022F40B /* Alert.swift */,
 				DBB30F8A20B941920023B308 /* iPhoneSize.swift */,
@@ -388,6 +388,7 @@
 			files = (
 				DBB30F7120B92ACF0023B308 /* TabBarController.swift in Sources */,
 				DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */,
+				DBFC51CD20B9D8E60022F40B /* R.generated.swift in Sources */,
 				DBFC51BF20B973ED0022F40B /* VirtualObjectNode.swift in Sources */,
 				DBFC51C720B9C70C0022F40B /* Alert.swift in Sources */,
 				DBB30F8B20B941920023B308 /* iPhoneSize.swift in Sources */,
@@ -400,7 +401,6 @@
 				DBB30F7720B930960023B308 /* TimeLineVC.swift in Sources */,
 				DBB30F6D20B928AA0023B308 /* ExUIViewController.swift in Sources */,
 				DBB30F8520B93D800023B308 /* SkeletonCollectionViewCell.swift in Sources */,
-				DBB30F7320B92ED00023B308 /* R.generated.swift in Sources */,
 				DBB30F8120B93C500023B308 /* CollectionViewCell.swift in Sources */,
 				DBFC51C320B9C5CB0022F40B /* Constant.swift in Sources */,
 				DBB30F7920B930DE0023B308 /* SearchVC.swift in Sources */,
@@ -550,7 +550,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 922P3K9888;
 				INFOPLIST_FILE = nirakka/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nagezeni.nirakka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -566,7 +569,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 922P3K9888;
 				INFOPLIST_FILE = nirakka/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nagezeni.nirakka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

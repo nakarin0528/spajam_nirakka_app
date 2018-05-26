@@ -58,6 +58,32 @@ final class GameDataCell: UITableViewCell {
         return label
     }()
 
+    private var scoreA: UILabel = {
+        let label = UILabel()
+        label.isHidden = true
+        label.sizeToFit()
+        label.font = .systemFont(ofSize: 12)
+        return label
+    }()
+
+    private var scoreB: UILabel = {
+        let label = UILabel()
+        label.isHidden = true
+        label.sizeToFit()
+        label.font = .systemFont(ofSize: 12)
+        return label
+    }()
+
+    private var scoreBar: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = "-"
+        label.isHidden = true
+        label.sizeToFit()
+        label.font = .systemFont(ofSize: 12)
+        return label
+    }()
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
@@ -82,6 +108,9 @@ final class GameDataCell: UITableViewCell {
         bgView.addSubview(teamLabel2)
         bgView.addSubview(timeLabel)
         bgView.addSubview(placeLabel)
+        bgView.addSubview(scoreA)
+        bgView.addSubview(scoreBar)
+        bgView.addSubview(scoreB)
 
         bgView.snp.makeConstraints {
             $0.top.bottom.equalToSuperview().inset(10)
@@ -109,6 +138,18 @@ final class GameDataCell: UITableViewCell {
             $0.bottom.equalToSuperview().inset(10)
             $0.right.equalToSuperview().inset(15)
         }
+        scoreBar.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalTo(vsLabel.snp.top).offset(-10)
+        }
+        scoreA.snp.makeConstraints {
+            $0.centerY.equalTo(scoreBar)
+            $0.right.equalTo(scoreBar.snp.left).offset(-5)
+        }
+        scoreB.snp.makeConstraints {
+            $0.centerY.equalTo(scoreBar)
+            $0.left.equalTo(scoreBar.snp.right).offset(5)
+        }
     }
 
     func configure(_ data: GameData) {
@@ -116,5 +157,25 @@ final class GameDataCell: UITableViewCell {
         teamLabel2.text = data.teamB.name
         timeLabel.text = data.startTime
         placeLabel.text = data.place
+        if data.isDone {
+            timeLabel.isHidden = true
+            scoreA.isHidden = false
+            scoreB.isHidden = false
+            scoreBar.isHidden = false
+            if data.result.scoreA > data.result.scoreB {
+                scoreA.textColor = .red
+                scoreB.textColor = .black
+            } else {
+                scoreA.textColor = .black
+                scoreB.textColor = .red
+            }
+            scoreA.text = String(data.result.scoreA)
+            scoreB.text = String(data.result.scoreB)
+        } else {
+            timeLabel.isHidden = false
+            scoreA.isHidden = true
+            scoreB.isHidden = true
+            scoreBar.isHidden = true
+        }
     }
 }
