@@ -11,10 +11,19 @@
 		DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F561720B915390058ADBD /* AppDelegate.swift */; };
 		DB9F561A20B915390058ADBD /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9F561920B915390058ADBD /* art.scnassets */; };
 		DB9F561C20B915390058ADBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F561B20B915390058ADBD /* ViewController.swift */; };
-		DB9F561F20B9153A0058ADBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9F561D20B9153A0058ADBD /* Main.storyboard */; };
 		DB9F562120B9153A0058ADBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9F562020B9153A0058ADBD /* Assets.xcassets */; };
 		DB9F562420B9153A0058ADBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9F562220B9153A0058ADBD /* LaunchScreen.storyboard */; };
 		DB9F562E20B920E00058ADBD /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F562D20B920E00058ADBD /* StartVC.swift */; };
+		DBB30F5E20B925000023B308 /* NotoSansCJK-Bold.ttc in Resources */ = {isa = PBXBuildFile; fileRef = DBB30F5D20B924A30023B308 /* NotoSansCJK-Bold.ttc */; };
+		DBB30F5F20B925020023B308 /* NotoSansCJK-Medium.ttc in Resources */ = {isa = PBXBuildFile; fileRef = DBB30F5C20B9249C0023B308 /* NotoSansCJK-Medium.ttc */; };
+		DBB30F6B20B928AA0023B308 /* TrackingState+Desription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F6620B928A90023B308 /* TrackingState+Desription.swift */; };
+		DBB30F6C20B928AA0023B308 /* ExSCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F6720B928A90023B308 /* ExSCNNode.swift */; };
+		DBB30F6D20B928AA0023B308 /* ExUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F6820B928A90023B308 /* ExUIViewController.swift */; };
+		DBB30F6E20B928AA0023B308 /* ARPlaneAnchor+Visualize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F6920B928A90023B308 /* ARPlaneAnchor+Visualize.swift */; };
+		DBB30F6F20B928AA0023B308 /* ExUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F6A20B928AA0023B308 /* ExUIColor.swift */; };
+		DBB30F7120B92ACF0023B308 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7020B92ACF0023B308 /* TabBarController.swift */; };
+		DBB30F7320B92ED00023B308 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7220B92ED00023B308 /* R.generated.swift */; };
+		DBB30F7520B92FE30023B308 /* ExUIIMage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7420B92FE30023B308 /* ExUIIMage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +34,20 @@
 		DB9F561720B915390058ADBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB9F561920B915390058ADBD /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		DB9F561B20B915390058ADBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB9F561E20B9153A0058ADBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB9F562020B9153A0058ADBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB9F562320B9153A0058ADBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB9F562520B9153A0058ADBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB9F562D20B920E00058ADBD /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		DBB30F5C20B9249C0023B308 /* NotoSansCJK-Medium.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJK-Medium.ttc"; sourceTree = "<group>"; };
+		DBB30F5D20B924A30023B308 /* NotoSansCJK-Bold.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJK-Bold.ttc"; sourceTree = "<group>"; };
+		DBB30F6620B928A90023B308 /* TrackingState+Desription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TrackingState+Desription.swift"; sourceTree = "<group>"; };
+		DBB30F6720B928A90023B308 /* ExSCNNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExSCNNode.swift; sourceTree = "<group>"; };
+		DBB30F6820B928A90023B308 /* ExUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIViewController.swift; sourceTree = "<group>"; };
+		DBB30F6920B928A90023B308 /* ARPlaneAnchor+Visualize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARPlaneAnchor+Visualize.swift"; sourceTree = "<group>"; };
+		DBB30F6A20B928AA0023B308 /* ExUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIColor.swift; sourceTree = "<group>"; };
+		DBB30F7020B92ACF0023B308 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DBB30F7220B92ED00023B308 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		DBB30F7420B92FE30023B308 /* ExUIIMage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIIMage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +100,14 @@
 		DB9F561620B915390058ADBD /* nirakka */ = {
 			isa = PBXGroup;
 			children = (
+				DBB30F7220B92ED00023B308 /* R.generated.swift */,
+				DBB30F6520B9289C0023B308 /* common */,
+				DBB30F5C20B9249C0023B308 /* NotoSansCJK-Medium.ttc */,
+				DBB30F5D20B924A30023B308 /* NotoSansCJK-Bold.ttc */,
 				DB9F561720B915390058ADBD /* AppDelegate.swift */,
 				DB9F561920B915390058ADBD /* art.scnassets */,
 				DB9F561B20B915390058ADBD /* ViewController.swift */,
 				DB9F562B20B920B50058ADBD /* Class */,
-				DB9F561D20B9153A0058ADBD /* Main.storyboard */,
 				DB9F562020B9153A0058ADBD /* Assets.xcassets */,
 				DB9F562220B9153A0058ADBD /* LaunchScreen.storyboard */,
 				DB9F562520B9153A0058ADBD /* Info.plist */,
@@ -106,8 +127,22 @@
 			isa = PBXGroup;
 			children = (
 				DB9F562D20B920E00058ADBD /* StartVC.swift */,
+				DBB30F7020B92ACF0023B308 /* TabBarController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DBB30F6520B9289C0023B308 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				DBB30F6920B928A90023B308 /* ARPlaneAnchor+Visualize.swift */,
+				DBB30F6720B928A90023B308 /* ExSCNNode.swift */,
+				DBB30F6A20B928AA0023B308 /* ExUIColor.swift */,
+				DBB30F7420B92FE30023B308 /* ExUIIMage.swift */,
+				DBB30F6820B928A90023B308 /* ExUIViewController.swift */,
+				DBB30F6620B928A90023B308 /* TrackingState+Desription.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +158,7 @@
 				DB9F561220B915390058ADBD /* Resources */,
 				2D4323F022FC94F622BD687C /* [CP] Embed Pods Frameworks */,
 				541C7E051E958A399F819A6B /* [CP] Copy Pods Resources */,
+				DBB30F6020B925770023B308 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -172,9 +208,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9F561A20B915390058ADBD /* art.scnassets in Resources */,
+				DBB30F5F20B925020023B308 /* NotoSansCJK-Medium.ttc in Resources */,
+				DBB30F5E20B925000023B308 /* NotoSansCJK-Bold.ttc in Resources */,
 				DB9F562420B9153A0058ADBD /* LaunchScreen.storyboard in Resources */,
 				DB9F562120B9153A0058ADBD /* Assets.xcassets in Resources */,
-				DB9F561F20B9153A0058ADBD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +281,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DBB30F6020B925770023B308 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/nirakka\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -252,22 +302,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9F561C20B915390058ADBD /* ViewController.swift in Sources */,
+				DBB30F6F20B928AA0023B308 /* ExUIColor.swift in Sources */,
+				DBB30F6C20B928AA0023B308 /* ExSCNNode.swift in Sources */,
+				DBB30F7120B92ACF0023B308 /* TabBarController.swift in Sources */,
 				DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */,
 				DB9F562E20B920E00058ADBD /* StartVC.swift in Sources */,
+				DBB30F6D20B928AA0023B308 /* ExUIViewController.swift in Sources */,
+				DBB30F7320B92ED00023B308 /* R.generated.swift in Sources */,
+				DBB30F6E20B928AA0023B308 /* ARPlaneAnchor+Visualize.swift in Sources */,
+				DBB30F7520B92FE30023B308 /* ExUIIMage.swift in Sources */,
+				DBB30F6B20B928AA0023B308 /* TrackingState+Desription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DB9F561D20B9153A0058ADBD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB9F561E20B9153A0058ADBD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DB9F562220B9153A0058ADBD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
