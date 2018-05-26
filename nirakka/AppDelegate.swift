@@ -1,4 +1,5 @@
 import UIKit
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,8 +11,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = StartVC()
         window?.makeKeyAndVisible()
+        // TwitterKit
+        TWTRTwitter.sharedInstance().start(withConsumerKey:"gqC5hQB90FXVpETCFrtkqeqBA", consumerSecret: "oraHFHu3Od142O9uuJESKIsAugz1AMwTRlw78BQNPECCUINL0g")
 
         return true
+    }
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+        if TWTRTwitter.sharedInstance().application(app, open: url, options: options) {
+            return true
+        }
+        return false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

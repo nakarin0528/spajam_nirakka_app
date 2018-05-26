@@ -17,6 +17,9 @@ PODS:
   - SkeletonView (1.1.1)
   - SnapKit (4.0.0)
   - SwiftyJSON (4.0.0)
+  - TwitterCore (3.1.0)
+  - TwitterKit (3.3.0):
+    - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -28,6 +31,7 @@ DEPENDENCIES:
   - SkeletonView
   - SnapKit
   - SwiftyJSON
+  - TwitterKit
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
@@ -41,7 +45,9 @@ SPEC CHECKSUMS:
   SkeletonView: 041053e904504e7d8db83df166e599be75659fe1
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
+  TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: e81cd319c81aa97049afffa58acc55951756e26c
+PODFILE CHECKSUM: 381aada5314dcc4eca4e448c54be939e8dacda1d
 
 COCOAPODS: 1.4.0

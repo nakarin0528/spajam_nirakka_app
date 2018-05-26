@@ -20,6 +20,7 @@ target 'nirakka' do
   pod 'Alamofire'
   pod 'AlamofireImage'
   pod 'SwiftyJSON'
+  pod 'TwitterKit'
 
   # ファイル管理
   pod 'R.swift'
