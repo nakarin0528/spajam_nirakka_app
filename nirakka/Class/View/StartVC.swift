@@ -18,18 +18,19 @@ final class StartVC: UIViewController {
         btn.title = "さぁ、はじめよう！"
         btn.titleLabel?.font = .boldSystemFont(ofSize: 18)
         btn.titleColor = .white
-        btn.layer.cornerRadius = 20
-        btn.backgroundColor = UIColor(red: 255/255, green: 99/255, blue: 71/255, alpha: 1.0)
-        btn.layer.shadowOffset = CGSize(width: 0, height: 2)
-        btn.layer.shadowRadius = 2
-        btn.layer.shadowOpacity = 0.5
+        btn.layer.cornerRadius = 25
+        btn.backgroundColor = UIColor.app.yellow
+        btn.pulseColor = .white
+        btn.layer.shadowOffset = CGSize(width: 0, height: 3)
+        btn.layer.shadowRadius = 3
+        btn.layer.shadowOpacity = 0.4
         btn.addTarget(self, action: #selector(startDidTap), for: .touchUpInside)
         return btn
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 85/255, green: 186/255, blue: 172/255, alpha: 1.0)
+        view.backgroundColor = UIColor.app.blue
 
         setupViews()
     }
@@ -49,8 +50,8 @@ final class StartVC: UIViewController {
         startBtn.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalTo(screenSize().height/4 * 3)
-            $0.width.equalTo(170)
-            $0.height.equalTo(40)
+            $0.width.equalTo(180)
+            $0.height.equalTo(50)
         }
     }
 

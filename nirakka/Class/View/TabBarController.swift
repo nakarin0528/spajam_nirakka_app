@@ -20,7 +20,7 @@ final class TabBarController: UITabBarController {
     var controllers = [UIViewController]()
     var lastSelectedIndex = 0
 
-    let genreVC = GenreVC()
+    let timeLineVC = TimeLineVC()
     let searchVC = SearchVC()
     let teamVC = TeamVC()
 
@@ -39,7 +39,7 @@ final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tab1 = UINavigationController(rootViewController: genreVC)
+        let tab1 = UINavigationController(rootViewController: timeLineVC)
         let image1 = R.image.home()?.resize(toWidth: 40)
         tab1.tabBarItem = UITabBarItem(title: "試合一覧", image: image1, tag: 1)
 

@@ -79,4 +79,11 @@ extension AppExtension where Base: UIColor {
 //        return UIColor(red: 255 / 255, green: 90 / 255, blue: 94 / 255, alpha: 1.0)
         return UIColor(red: 252/255, green: 159/255, blue: 151/255, alpha: 1.0)
     }
+    static var blue: UIColor {
+        return UIColor(red: 72/255, green: 169/255, blue: 221/255, alpha: 1.0)
+    }
+
+    static var yellow: UIColor {
+        return UIColor(red: 245/255, green: 216/255, blue: 106/255, alpha: 1.0)
+    }
 }

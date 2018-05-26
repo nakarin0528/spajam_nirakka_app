@@ -6,6 +6,10 @@ final class GameDataCell: UITableViewCell {
     private let bgView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
+        view.layer.cornerRadius = 5
+        view.layer.shadowOffset = CGSize(width: 0, height: 3)
+        view.layer.shadowRadius = 3
+        view.layer.shadowOpacity = 0.4
         return view
     }()
 
@@ -50,10 +54,10 @@ final class GameDataCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         // セル選択時のハイライト色を設定
-        //        selectionStyle = .none
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.app.warmGray
-        selectedBackgroundView = backgroundView
+                selectionStyle = .none
+//        let backgroundView = UIView()
+//        backgroundView.backgroundColor = UIColor.app.warmGray
+//        selectedBackgroundView = backgroundView
         backgroundColor = .clear
 
         setupViews()
@@ -63,7 +67,6 @@ final class GameDataCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-
     func setupViews() {
         contentView.addSubview(bgView)
         bgView.addSubview(teamLabel1)
@@ -72,7 +75,8 @@ final class GameDataCell: UITableViewCell {
         bgView.addSubview(timeLabel)
 
         bgView.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(1)
+            $0.top.bottom.equalToSuperview().inset(10)
+            $0.left.right.equalToSuperview().inset(20)
         }
         teamLabel1.snp.makeConstraints {
             $0.left.equalToSuperview().inset(20)

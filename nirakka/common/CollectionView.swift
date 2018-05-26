@@ -10,7 +10,7 @@ final class CollectionView: UICollectionView {
 
         register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
         register(SkeletonCollectionViewCell.self, forCellWithReuseIdentifier: "SkeletonCollectionViewCell")
-        backgroundColor = UIColor.app.scrollViewBackgroundColor
+        backgroundColor = UIColor.app.blue
     }
 
     required init?(coder _: NSCoder) {

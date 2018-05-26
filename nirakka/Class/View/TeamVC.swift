@@ -14,8 +14,8 @@ final class TeamVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .white
-        title = "チーム一覧"
 
         setupViews()
 
@@ -68,27 +68,23 @@ extension TeamVC: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // ローディング用
-        if self.model.timeLineData.count == 0 && !self.isFirstFetched {
-            self.timeLineView.backgroundColor = .white
-            return 8
-        }
-        return self.model.timeLineData.count
+//        if self.model.timeLineData.count == 0 && !self.isFirstFetched {
+//            self.timeLineView.backgroundColor = .white
+//            return 8
+//        }
+//        return self.model.timeLineData.count
+        return 8
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if self.model.timeLineData.count == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SkeletonCollectionViewCell", for: indexPath) as! SkeletonCollectionViewCell
-            return cell
-        }
+//        if self.model.timeLineData.count == 0 {
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SkeletonCollectionViewCell", for: indexPath) as! SkeletonCollectionViewCell
+//            return cell
+//        }
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        // TODO:リフレッシュした時にエラーが起きる
-        if self.model.timeLineData.count < indexPath.row {
-            return cell
-        }
-        var item = self.model.timeLineData[indexPath.row]
-        item.isSaved = false
-        cell.configure(data: item)
+//        var item = self.model.timeLineData[indexPath.row]
+//        cell.configure(data: item)
         return cell
     }
 }

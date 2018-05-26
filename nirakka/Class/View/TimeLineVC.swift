@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-final class GenreVC: UIViewController {
+final class TimeLineVC: UIViewController {
 
     let model = TimeLineModel()
 
@@ -14,7 +14,7 @@ final class GenreVC: UIViewController {
         table.estimatedRowHeight = 120
         table.rowHeight = UITableViewAutomaticDimension
         table.tableFooterView = UIView()
-        table.backgroundColor = UIColor.app.untWhiteTwo
+        table.backgroundColor = UIColor.app.blue
         table.separatorColor = .clear
         table.keyboardDismissMode = .onDrag
         table.delegate = self
@@ -24,8 +24,7 @@ final class GenreVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.app.untWhiteTwo
-        title = "試合一覧"
+        navigationController?.navigationBar.isHidden = true
 
         setupViews()
 
@@ -74,14 +73,13 @@ final class GenreVC: UIViewController {
     }
 }
 
-extension GenreVC: UITableViewDelegate {
+extension TimeLineVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-//            let detailVC = DetailVC()
-//            detailVC.hidesBottomBarWhenPushed = true
-//            self.navigationController?.pushViewController(detailVC, animated: true)
+        let vc = GameDetailVC()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
 
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -97,7 +95,7 @@ extension GenreVC: UITableViewDelegate {
     }
 }
 
-extension GenreVC: UITableViewDataSource {
+extension TimeLineVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameDataCell") as? GameDataCell ?? GameDataCell()
