@@ -96,7 +96,7 @@ final class GameDetailVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "ゼニを投げよう！"
+        title = "応援しよう！"
         view.backgroundColor = UIColor.app.blue
         navigationController?.navigationBar.isHidden = false
 
