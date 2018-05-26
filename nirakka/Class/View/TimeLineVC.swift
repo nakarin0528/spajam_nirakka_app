@@ -29,25 +29,10 @@ final class TimeLineVC: UIViewController {
         setupViews()
 
         self.refetch()
-
-        // 引っ張って更新
-        let refresh = UIRefreshControl()
-        refresh.tintColor = .white
-        if #available(iOS 10.0, *) {
-            self.tableView.refreshControl = refresh
-        } else {
-            self.tableView.backgroundView = refresh
-        }
-        refresh.addTarget(self, action: #selector(refreshTable), for: UIControlEvents.valueChanged)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-
-    //テーブルビュー引っ張り時の呼び出しメソッド
-    @objc func refreshTable(_ refreshControl: UIRefreshControl){
-        self.refetch(refreshControl: refreshControl)
     }
 
     func refetch(refreshControl: UIRefreshControl? = nil) {
@@ -55,10 +40,6 @@ final class TimeLineVC: UIViewController {
         self.model.fetchDatas { [weak self] isSuccess in
             self?.isFirstFetched = false
             self?.tableView.reloadData()
-            //読込中の表示を消す。
-            if let refreshControl = refreshControl {
-                refreshControl.endRefreshing()
-            }
         }
     }
 
