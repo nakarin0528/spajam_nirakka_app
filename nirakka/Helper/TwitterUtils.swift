@@ -1,8 +1,7 @@
 import TwitterKit
 
-class TwitterUtils {
-    
-    let shareURL = "https://spajam.jp/"
+class TwitterUtils
+{
     
     func login(on viewController: UIViewController, completion: @escaping () -> Void) {
         let isLoggined = TWTRTwitter.sharedInstance().sessionStore.hasLoggedInUsers()
@@ -22,17 +21,15 @@ class TwitterUtils {
                 completion()
             }
         }
-        
     }
     
-    
-    func tweet(team: String, yen:Int, completion: @escaping () -> Void) {
+    func tweet(team: String, yen:Int) {
         //ユーザー情報があるかどうか調べる
         if let userID = TWTRTwitter.sharedInstance().sessionStore.session()?.userID {
             let client = TWTRAPIClient(userID: userID)
             var clientError : NSError?
             let endPoint = "https://api.twitter.com/1.1/statuses/update.json"
-            let text = "\n\(team)円を\(yen)に寄付しました. #tipay #\n\(shareURL)"
+            let text = "\n\(team)高校に\(yen)円寄付しました #tipay\n"
             let params = ["status" : text]
             
             let request = client.urlRequest(withMethod: "POST", urlString: endPoint, parameters: params, error: &clientError)
@@ -40,7 +37,6 @@ class TwitterUtils {
             client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
                 if (connectionError == nil) {
                     print("sucess");
-                    completion()
                 }
                 else {
                     print(String(describing: connectionError))
