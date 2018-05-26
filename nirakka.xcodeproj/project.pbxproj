@@ -43,7 +43,6 @@
 		DBFC51C720B9C70C0022F40B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C620B9C70C0022F40B /* Alert.swift */; };
 		DBFC51C920B9C7AD0022F40B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C820B9C7AC0022F40B /* Helper.swift */; };
 		DBFC51CB20B9CC940022F40B /* GameDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */; };
-		DBFC51D320B9FC8E0022F40B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51D220B9FC8E0022F40B /* R.generated.swift */; };
 		DBFC51D520B9FE8C0022F40B /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51D420B9FE8C0022F40B /* SearchModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,7 +87,6 @@
 		DBFC51C620B9C70C0022F40B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		DBFC51C820B9C7AC0022F40B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailVC.swift; sourceTree = "<group>"; };
-		DBFC51D220B9FC8E0022F40B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		DBFC51D420B9FE8C0022F40B /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -578,7 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XK2UZ42449;
+				DEVELOPMENT_TEAM = 922P3K9888;
 				INFOPLIST_FILE = nirakka/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -598,7 +596,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XK2UZ42449;
+				DEVELOPMENT_TEAM = 922P3K9888;
 				INFOPLIST_FILE = nirakka/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
