@@ -43,6 +43,8 @@
 		DBFC51C720B9C70C0022F40B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C620B9C70C0022F40B /* Alert.swift */; };
 		DBFC51C920B9C7AD0022F40B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C820B9C7AC0022F40B /* Helper.swift */; };
 		DBFC51CB20B9CC940022F40B /* GameDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */; };
+		DBFC51D320B9FC8E0022F40B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51D220B9FC8E0022F40B /* R.generated.swift */; };
+		DBFC51D520B9FE8C0022F40B /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51D420B9FE8C0022F40B /* SearchModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		DBFC51C620B9C70C0022F40B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		DBFC51C820B9C7AC0022F40B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailVC.swift; sourceTree = "<group>"; };
+		DBFC51D220B9FC8E0022F40B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		DBFC51D420B9FE8C0022F40B /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,7 @@
 			children = (
 				DBB30F8720B93F5D0023B308 /* TimeLineModel.swift */,
 				8707DBED20B9E1A200E4BC51 /* TeamModel.swift */,
+				DBFC51D420B9FE8C0022F40B /* SearchModel.swift */,
 				871AEE6820BA048E006DB326 /* TippingModel.swift */,
 			);
 			path = Model;
@@ -414,6 +419,7 @@
 				DBB30F8320B93CBB0023B308 /* GameData.swift in Sources */,
 				DB9F562E20B920E00058ADBD /* StartVC.swift in Sources */,
 				DBB30F9520B9458E0023B308 /* GameDataCell.swift in Sources */,
+				DBFC51D520B9FE8C0022F40B /* SearchModel.swift in Sources */,
 				DBB30F7F20B93C480023B308 /* CollectionView.swift in Sources */,
 				4277106E20B9DBE60082AEA3 /* TwitterUtils.swift in Sources */,
 				DBB30F8820B93F5D0023B308 /* TimeLineModel.swift in Sources */,
