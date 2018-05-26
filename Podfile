@@ -13,9 +13,11 @@ target 'nirakka' do
   pod 'SnapKit'
   pod 'Material'
   pod 'PagingMenuController'
+  pod "SkeletonView"
 
   # API
   pod 'Alamofire'
+  pod 'AlamofireImage'
   pod 'SwiftyJSON'
 
   # ファイル管理

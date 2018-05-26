@@ -22,7 +22,7 @@ final class TabBarController: UITabBarController {
 
     let genreVC = GenreVC()
     let searchVC = SearchVC()
-    let myPageVC = MyPageVC()
+    let teamVC = TeamVC()
 
     private init() {
         super.init(nibName: nil, bundle: nil)
@@ -47,7 +47,7 @@ final class TabBarController: UITabBarController {
         let image2 = R.image.search()?.resize(toWidth: 40)
         tab2.tabBarItem = UITabBarItem(title: "", image: image2, tag: 2)
 
-        let tab3 = UINavigationController(rootViewController: myPageVC)
+        let tab3 = UINavigationController(rootViewController: teamVC)
         let image3 = R.image.profile()?.resize(toWidth: 30)
         tab3.tabBarItem = UITabBarItem(title: "", image: image3, tag: 3)
 
