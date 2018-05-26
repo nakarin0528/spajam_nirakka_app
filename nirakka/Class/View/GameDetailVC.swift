@@ -1,12 +1,15 @@
 import UIKit
 import SnapKit
 import Material
+import AudioToolbox
 
 final class GameDetailVC: UIViewController {
     let twitterUtils = TwitterUtils()
     let model = TippingModel()
     var tip = Tipping()
     let data: GameData
+    var sumA = 0
+    var sumB = 0
     
     private let backDanboA: UIImageView = {
         let imageView = UIImageView()
@@ -38,8 +41,22 @@ final class GameDetailVC: UIViewController {
         label.sizeToFit()
         return label
     }()
+    
+    private let teamAsum: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "NotoSansCJKjp-Medium", size: 20)
+        label.sizeToFit()
+        return label
+    }()
 
     private let teamB: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "NotoSansCJKjp-Medium", size: 20)
+        label.sizeToFit()
+        return label
+    }()
+    
+    private let teamBsum: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "NotoSansCJKjp-Medium", size: 20)
         label.sizeToFit()
@@ -83,6 +100,10 @@ final class GameDetailVC: UIViewController {
     init(data: GameData) {
         teamA.text = data.teamA.name
         teamB.text = data.teamB.name
+        sumA = data.teamA.sumMoney
+        sumB = data.teamB.sumMoney
+        teamAsum.text = String(sumA)+"円"
+        teamBsum.text = String(sumB)+"円"
         self.data = data
         super.init(nibName: nil, bundle: nil)
         tip.userId = 0
@@ -105,6 +126,11 @@ final class GameDetailVC: UIViewController {
         setupViews()
     }
 
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.isHidden = true
@@ -127,7 +153,9 @@ final class GameDetailVC: UIViewController {
         view.addSubview(frontDanboA)
         view.addSubview(frontDanboB)
         view.addSubview(teamA)
+        view.addSubview(teamAsum)
         view.addSubview(teamB)
+        view.addSubview(teamBsum)
         view.addSubview(btnA)
         view.addSubview(btnB)
 
@@ -149,9 +177,17 @@ final class GameDetailVC: UIViewController {
             $0.centerX.equalTo(backDanboA)
             $0.top.equalTo(backDanboA.snp.bottom).offset(10)
         }
+        teamAsum.snp.makeConstraints {
+            $0.centerX.equalTo(backDanboA)
+            $0.top.equalTo(backDanboA.snp.bottom).offset(35)
+        }
         teamB.snp.makeConstraints {
             $0.centerX.equalTo(backDanboB)
             $0.top.equalTo(backDanboB.snp.bottom).offset(10)
+        }
+        teamBsum.snp.makeConstraints {
+            $0.centerX.equalTo(backDanboB)
+            $0.top.equalTo(backDanboA.snp.bottom).offset(35)
         }
         btnA.snp.makeConstraints {
             $0.center.size.equalTo(backDanboA)
@@ -175,6 +211,14 @@ final class GameDetailVC: UIViewController {
         Alert.showAction(title: "決定", message: "Do you want to 投げ銭？", action: { isSuccess in
             if isSuccess {
                 self.animation(btn)
+                // 決定した瞬間のバイブ
+                if #available(iOS 10.0, *) {
+                    let generator = UIImpactFeedbackGenerator(style: .medium)
+                    generator.impactOccurred()
+                } else {
+                    AudioServicesPlaySystemSound(1003)
+                    AudioServicesDisposeSystemSoundID(1003)
+                }
             }
         } )
     }
@@ -187,6 +231,8 @@ final class GameDetailVC: UIViewController {
                 tip.teamId = tip.teamAId
                 self.model.fetchDatas(tip:self.tip, completion: { isTrue in
                 })
+                self.sumA += 100
+                teamAsum.text = String(self.sumA)+"円"
             }
             self.twitterUtils.tweet(team: data.teamA.name, yen: 100)
         } else {
@@ -196,6 +242,8 @@ final class GameDetailVC: UIViewController {
                 tip.teamId = tip.teamBId
                 self.model.fetchDatas(tip:self.tip, completion: { isTrue in
                 })
+                self.sumB += 100
+                teamBsum.text = String(self.sumB)+"円"
             }
             self.twitterUtils.tweet(team: data.teamB.name, yen: 100)
         }
@@ -214,6 +262,11 @@ final class GameDetailVC: UIViewController {
             }
             self.view.layoutIfNeeded()
         }, completion: { _ in
+            if #available(iOS 10.0, *) {
+                // コインが入った瞬間のバイブ
+                let generator = UINotificationFeedbackGenerator()
+                generator.notificationOccurred(.success)
+            }
             self.coinImageView.isHidden = true
             if btn.tag == 0 {
                 self.coinsA.isHidden = false

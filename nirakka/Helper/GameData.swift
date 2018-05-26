@@ -37,6 +37,7 @@ struct GameData {
 struct Team {
     var name = ""
     var id = 0
+    var sumMoney = 0
 
     init() {
     }
@@ -44,6 +45,7 @@ struct Team {
     init(_ json: JSON) {
         name = json["name"].stringValue
         id = json["id"].intValue
+        sumMoney = json["sum_money"].intValue
     }
 }
 
