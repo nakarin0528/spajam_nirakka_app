@@ -1,6 +1,7 @@
 import UIKit
 import SnapKit
 import Material
+import AudioToolbox
 
 final class GameDetailVC: UIViewController {
     let twitterUtils = TwitterUtils()
@@ -175,6 +176,14 @@ final class GameDetailVC: UIViewController {
         Alert.showAction(title: "決定", message: "Do you want to 投げ銭？", action: { isSuccess in
             if isSuccess {
                 self.animation(btn)
+                // 決定した瞬間のバイブ
+                if #available(iOS 10.0, *) {
+                    let generator = UIImpactFeedbackGenerator(style: .medium)
+                    generator.impactOccurred()
+                } else {
+                    AudioServicesPlaySystemSound(1003)
+                    AudioServicesDisposeSystemSoundID(1003)
+                }
             }
         } )
     }
@@ -187,6 +196,11 @@ final class GameDetailVC: UIViewController {
                 tip.teamId = tip.teamAId
                 self.model.fetchDatas(tip:self.tip, completion: { isTrue in
                 })
+                if #available(iOS 10.0, *) {
+                    // コインが入った瞬間のバイブ
+                    let generator = UINotificationFeedbackGenerator()
+                    generator.notificationOccurred(.success)
+                }
             }
             self.twitterUtils.tweet(team: data.teamA.name, yen: 100)
         } else {
@@ -196,6 +210,11 @@ final class GameDetailVC: UIViewController {
                 tip.teamId = tip.teamBId
                 self.model.fetchDatas(tip:self.tip, completion: { isTrue in
                 })
+                if #available(iOS 10.0, *) {
+                    // コインが入った瞬間のバイブ
+                    let generator = UINotificationFeedbackGenerator()
+                    generator.notificationOccurred(.success)
+                }
             }
             self.twitterUtils.tweet(team: data.teamB.name, yen: 100)
         }
