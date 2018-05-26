@@ -20,6 +20,7 @@ class GameDetailVC: UIViewController, ARSCNViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
 
         view.addSubview(sceneView)
         sceneView.snp.makeConstraints {
@@ -29,12 +30,17 @@ class GameDetailVC: UIViewController, ARSCNViewDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
 
         // Run the view's session
         sceneView.session.run(configuration)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
