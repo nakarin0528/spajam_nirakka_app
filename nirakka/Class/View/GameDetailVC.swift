@@ -3,9 +3,10 @@ import SnapKit
 import Material
 
 final class GameDetailVC: UIViewController {
-
+    let twitterUtils = TwitterUtils()
     let model = TippingModel()
     var tip = Tipping()
+    let data: GameData
     
     private let backDanboA: UIImageView = {
         let imageView = UIImageView()
@@ -82,6 +83,7 @@ final class GameDetailVC: UIViewController {
     init(data: GameData) {
         teamA.text = data.teamA.name
         teamB.text = data.teamB.name
+        self.data = data
         super.init(nibName: nil, bundle: nil)
         tip.userId = 0
         tip.gameId = data.gameId
@@ -173,7 +175,6 @@ final class GameDetailVC: UIViewController {
         Alert.showAction(title: "決定", message: "Do you want to 投げ銭？", action: { isSuccess in
             if isSuccess {
                 self.animation(btn)
-
             }
         } )
     }
@@ -187,6 +188,7 @@ final class GameDetailVC: UIViewController {
                 self.model.fetchDatas(tip:self.tip, completion: { isTrue in
                 })
             }
+            self.twitterUtils.tweet(team: data.teamA.name, yen: 100)
         } else {
             coinImageView.snp.remakeConstraints {
                 $0.centerX.equalTo(backDanboB)
@@ -195,6 +197,7 @@ final class GameDetailVC: UIViewController {
                 self.model.fetchDatas(tip:self.tip, completion: { isTrue in
                 })
             }
+            self.twitterUtils.tweet(team: data.teamB.name, yen: 100)
         }
         self.view.layoutIfNeeded()
         self.coinImageView.isHidden = false
