@@ -7,6 +7,20 @@ final class SearchVC: UIViewController {
 
     private var isFirstFetched = false
 
+    private let dateLabel: UILabel = {
+        let label = UILabel()
+        label.text = "8月8日"
+        label.font = UIFont(name: "NotoSansCJKjp-Medium", size: 18)
+        label.textAlignment = .center
+        label.backgroundColor = .white
+        label.layer.cornerRadius = 20
+        label.layer.masksToBounds = true
+        label.layer.shadowOffset = CGSize(width: 0, height: 3)
+        label.layer.shadowRadius = 3
+        label.layer.shadowOpacity = 0.4
+        return label
+    }()
+
     private lazy var tableView: UITableView = {
         let table = UITableView()
         table.register(GameDataCell.self, forCellReuseIdentifier: "GameDataCell")
@@ -19,6 +33,7 @@ final class SearchVC: UIViewController {
         table.keyboardDismissMode = .onDrag
         table.delegate = self
         table.dataSource = self
+        table.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 0, right: 0)
         return table
     }()
 
@@ -45,8 +60,15 @@ final class SearchVC: UIViewController {
 
     private func setupViews() {
         view.addSubview(tableView)
+        view.addSubview(dateLabel)
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+        dateLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(topMargin()).offset(20)
+            $0.height.equalTo(40)
+            $0.width.equalTo(120)
         }
     }
 }
