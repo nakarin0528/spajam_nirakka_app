@@ -1,11 +1,3 @@
-//
-//  TimeLineModel.swift
-//  nirakka
-//
-//  Created by Iko Nakari on 2018/05/26.
-//  Copyright © 2018年 teamNirakka. All rights reserved.
-//
-
 import UIKit
 import Material
 import Alamofire
@@ -34,19 +26,6 @@ final class SkeletonCollectionViewCell: UICollectionViewCell {
         return view
     }()
     
-//    private let iconBackgroundView: UIView = {
-//        let view = UIView()
-////        view.backgroundColor = UIColor(white: 0, alpha: 0.2)
-//        view.layer.cornerRadius = 15
-//        view.layer.masksToBounds = true
-//        return view
-//    }()
-//
-//    lazy var saveButtonView: UIView  = {
-//        let btn = UIView()
-//        btn.layer.cornerRadius = 15
-//        return btn
-//    }()
 
     /* life cycle */
 
