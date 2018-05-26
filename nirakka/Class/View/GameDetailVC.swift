@@ -4,6 +4,9 @@ import Material
 
 final class GameDetailVC: UIViewController {
 
+    let model = TippingModel()
+    var tip = Tipping()
+    
     private let backDanboA: UIImageView = {
         let imageView = UIImageView()
         imageView.image = R.image.danbo()?.resize(toWidth: 120)
@@ -45,14 +48,14 @@ final class GameDetailVC: UIViewController {
     private lazy var btnA: UIButton = {
         let btn = UIButton()
         btn.tag = 0
-        btn.addTarget(self, action: #selector(animation(btn:)), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(btnDidTap(btn:)), for: .touchUpInside)
         return btn
     }()
 
     private lazy var btnB: UIButton = {
         let btn = UIButton()
         btn.tag = 1
-        btn.addTarget(self, action: #selector(animation(btn:)), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(btnDidTap(btn:)), for: .touchUpInside)
         return btn
     }()
 
@@ -80,6 +83,11 @@ final class GameDetailVC: UIViewController {
         teamA.text = data.teamA.name
         teamB.text = data.teamB.name
         super.init(nibName: nil, bundle: nil)
+        tip.userId = 0
+        tip.gameId = data.gameId
+        tip.teamAId = data.teamA.id
+        tip.teamBId = data.teamB.id
+        tip.money = 100
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -160,17 +168,32 @@ final class GameDetailVC: UIViewController {
             $0.center.equalTo(backDanboB)
         }
     }
+    
+    @objc private func btnDidTap(btn: UIButton) {
+        Alert.showAction(title: "決定", message: "Do you want to 投げ銭？", action: { isSuccess in
+            if isSuccess {
+                self.animation(btn)
 
-    @objc private func animation(btn: UIButton) {
+            }
+        } )
+    }
+
+    private func animation(_ btn: UIButton) {
         if btn.tag == 0 {
             coinImageView.snp.remakeConstraints {
                 $0.centerX.equalTo(backDanboA)
                 $0.bottom.equalTo(view.snp.top)
+                tip.teamId = tip.teamAId
+                self.model.fetchDatas(tip:self.tip, completion: { isTrue in
+                })
             }
         } else {
             coinImageView.snp.remakeConstraints {
                 $0.centerX.equalTo(backDanboB)
                 $0.bottom.equalTo(view.snp.top)
+                tip.teamId = tip.teamBId
+                self.model.fetchDatas(tip:self.tip, completion: { isTrue in
+                })
             }
         }
         self.view.layoutIfNeeded()
