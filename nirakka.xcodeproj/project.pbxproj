@@ -38,7 +38,7 @@
 		DBFC51C720B9C70C0022F40B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C620B9C70C0022F40B /* Alert.swift */; };
 		DBFC51C920B9C7AD0022F40B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C820B9C7AC0022F40B /* Helper.swift */; };
 		DBFC51CB20B9CC940022F40B /* GameDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */; };
-		DBFC51CD20B9D8E60022F40B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51CC20B9D8E60022F40B /* R.generated.swift */; };
+		DBFC51D120B9F5990022F40B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51D020B9F5990022F40B /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,7 +77,7 @@
 		DBFC51C620B9C70C0022F40B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		DBFC51C820B9C7AC0022F40B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailVC.swift; sourceTree = "<group>"; };
-		DBFC51CC20B9D8E60022F40B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		DBFC51D020B9F5990022F40B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +130,7 @@
 		DB9F561620B915390058ADBD /* nirakka */ = {
 			isa = PBXGroup;
 			children = (
+				DBFC51D020B9F5990022F40B /* R.generated.swift */,
 				DBB30F9220B943220023B308 /* Extensions */,
 				DBB30F6520B9289C0023B308 /* common */,
 				DBB30F5C20B9249C0023B308 /* NotoSansCJK-Medium.ttc */,
@@ -147,7 +148,6 @@
 		DB9F562B20B920B50058ADBD /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				DBFC51CC20B9D8E60022F40B /* R.generated.swift */,
 				DBB30F9320B9457E0023B308 /* Cell */,
 				DBB30F8620B93F530023B308 /* Model */,
 				DB9F562C20B920C20058ADBD /* View */,
@@ -394,7 +394,7 @@
 			files = (
 				DBB30F7120B92ACF0023B308 /* TabBarController.swift in Sources */,
 				DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */,
-				DBFC51CD20B9D8E60022F40B /* R.generated.swift in Sources */,
+				DBFC51D120B9F5990022F40B /* R.generated.swift in Sources */,
 				DBFC51BF20B973ED0022F40B /* VirtualObjectNode.swift in Sources */,
 				8707DBF020B9E20900E4BC51 /* TeamData.swift in Sources */,
 				DBFC51C720B9C70C0022F40B /* Alert.swift in Sources */,
