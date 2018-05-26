@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nirakka/Helper/Tipping.swift"
+            timestampString = "549063647.945163"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "Tipping"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of nirakka.Tipping.userId : Swift.Int"
+                  moduleName = "nirakka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mo-ri-/Works/Private/hackathon/spajam_nirakka_app/nirakka/Helper/Tipping.swift"
+                  timestampString = "549063648.093322"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nirakka.Tipping.userId.getter : Swift.Int"
+                  moduleName = "nirakka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mo-ri-/Works/Private/hackathon/spajam_nirakka_app/nirakka/Helper/Tipping.swift"
+                  timestampString = "549063648.095062"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nirakka.Tipping.userId.setter : Swift.Int"
+                  moduleName = "nirakka"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mo-ri-/Works/Private/hackathon/spajam_nirakka_app/nirakka/Helper/Tipping.swift"
+                  timestampString = "549063648.096835"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

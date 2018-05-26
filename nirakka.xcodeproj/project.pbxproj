@@ -11,6 +11,9 @@
 		4277107020B9E8010082AEA3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4277106F20B9E8010082AEA3 /* SafariServices.framework */; };
 		8707DBEE20B9E1A200E4BC51 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8707DBED20B9E1A200E4BC51 /* TeamModel.swift */; };
 		8707DBF020B9E20900E4BC51 /* TeamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8707DBEF20B9E20900E4BC51 /* TeamData.swift */; };
+		871AEE6520B9FD2F006DB326 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871AEE6420B9FD2F006DB326 /* R.generated.swift */; };
+		871AEE6720BA03CE006DB326 /* Tipping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871AEE6620BA03CE006DB326 /* Tipping.swift */; };
+		871AEE6920BA048E006DB326 /* TippingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871AEE6820BA048E006DB326 /* TippingModel.swift */; };
 		93D916F6F53A85944C7CDBC6 /* Pods_nirakka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F3B6C71394106EACD93DA0 /* Pods_nirakka.framework */; };
 		DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F561720B915390058ADBD /* AppDelegate.swift */; };
 		DB9F562120B9153A0058ADBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9F562020B9153A0058ADBD /* Assets.xcassets */; };
@@ -40,7 +43,6 @@
 		DBFC51C720B9C70C0022F40B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C620B9C70C0022F40B /* Alert.swift */; };
 		DBFC51C920B9C7AD0022F40B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51C820B9C7AC0022F40B /* Helper.swift */; };
 		DBFC51CB20B9CC940022F40B /* GameDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */; };
-		DBFC51D320B9FC8E0022F40B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC51D220B9FC8E0022F40B /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,9 @@
 		4277106F20B9E8010082AEA3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		8707DBED20B9E1A200E4BC51 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
 		8707DBEF20B9E20900E4BC51 /* TeamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamData.swift; sourceTree = "<group>"; };
+		871AEE6420B9FD2F006DB326 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		871AEE6620BA03CE006DB326 /* Tipping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tipping.swift; sourceTree = "<group>"; };
+		871AEE6820BA048E006DB326 /* TippingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TippingModel.swift; sourceTree = "<group>"; };
 		DB9F561420B915390058ADBD /* nirakka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nirakka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9F561720B915390058ADBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB9F562020B9153A0058ADBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,7 +86,6 @@
 		DBFC51C620B9C70C0022F40B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		DBFC51C820B9C7AC0022F40B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		DBFC51CA20B9CC940022F40B /* GameDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailVC.swift; sourceTree = "<group>"; };
-		DBFC51D220B9FC8E0022F40B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +157,7 @@
 		DB9F562B20B920B50058ADBD /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				DBFC51D220B9FC8E0022F40B /* R.generated.swift */,
+				871AEE6420B9FD2F006DB326 /* R.generated.swift */,
 				DBB30F9320B9457E0023B308 /* Cell */,
 				DBB30F8620B93F530023B308 /* Model */,
 				DB9F562C20B920C20058ADBD /* View */,
@@ -189,6 +193,7 @@
 			children = (
 				DBB30F8720B93F5D0023B308 /* TimeLineModel.swift */,
 				8707DBED20B9E1A200E4BC51 /* TeamModel.swift */,
+				871AEE6820BA048E006DB326 /* TippingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				DBFC51C420B9C6A30022F40B /* Log.swift */,
 				4277106D20B9DBE60082AEA3 /* TwitterUtils.swift */,
 				8707DBEF20B9E20900E4BC51 /* TeamData.swift */,
+				871AEE6620BA03CE006DB326 /* Tipping.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -411,16 +417,18 @@
 				DBB30F7F20B93C480023B308 /* CollectionView.swift in Sources */,
 				4277106E20B9DBE60082AEA3 /* TwitterUtils.swift in Sources */,
 				DBB30F8820B93F5D0023B308 /* TimeLineModel.swift in Sources */,
+				871AEE6720BA03CE006DB326 /* Tipping.swift in Sources */,
 				DBFC51C520B9C6A30022F40B /* Log.swift in Sources */,
 				DBB30F7720B930960023B308 /* TimeLineVC.swift in Sources */,
 				DBB30F6D20B928AA0023B308 /* ExUIViewController.swift in Sources */,
 				DBB30F8520B93D800023B308 /* SkeletonCollectionViewCell.swift in Sources */,
 				DBB30F8120B93C500023B308 /* CollectionViewCell.swift in Sources */,
+				871AEE6920BA048E006DB326 /* TippingModel.swift in Sources */,
 				DBFC51C320B9C5CB0022F40B /* Constant.swift in Sources */,
 				DBB30F7920B930DE0023B308 /* SearchVC.swift in Sources */,
 				8707DBEE20B9E1A200E4BC51 /* TeamModel.swift in Sources */,
 				DBFC51CB20B9CC940022F40B /* GameDetailVC.swift in Sources */,
-				DBFC51D320B9FC8E0022F40B /* R.generated.swift in Sources */,
+				871AEE6520B9FD2F006DB326 /* R.generated.swift in Sources */,
 				DBB30F9120B942E20023B308 /* AppExtension.swift in Sources */,
 				DBB30F7B20B931280023B308 /* TeamVC.swift in Sources */,
 				DBB30F7520B92FE30023B308 /* ExUIIMage.swift in Sources */,

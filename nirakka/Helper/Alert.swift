@@ -89,7 +89,7 @@ struct Alert {
                             withTitle: title,
                             withSubtitle: message,
                             withCustomImage: nil,
-                            withDoneButtonTitle: "保存",
+                            withDoneButtonTitle: "決定",
                             andButtons: nil
             )
         })
