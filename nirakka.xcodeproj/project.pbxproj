@@ -24,6 +24,9 @@
 		DBB30F7120B92ACF0023B308 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7020B92ACF0023B308 /* TabBarController.swift */; };
 		DBB30F7320B92ED00023B308 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7220B92ED00023B308 /* R.generated.swift */; };
 		DBB30F7520B92FE30023B308 /* ExUIIMage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7420B92FE30023B308 /* ExUIIMage.swift */; };
+		DBB30F7720B930960023B308 /* GenreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7620B930960023B308 /* GenreVC.swift */; };
+		DBB30F7920B930DE0023B308 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7820B930DE0023B308 /* SearchVC.swift */; };
+		DBB30F7B20B931280023B308 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB30F7A20B931280023B308 /* MyPageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		DBB30F7020B92ACF0023B308 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DBB30F7220B92ED00023B308 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		DBB30F7420B92FE30023B308 /* ExUIIMage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIIMage.swift; sourceTree = "<group>"; };
+		DBB30F7620B930960023B308 /* GenreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreVC.swift; sourceTree = "<group>"; };
+		DBB30F7820B930DE0023B308 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		DBB30F7A20B931280023B308 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,9 @@
 			children = (
 				DB9F562D20B920E00058ADBD /* StartVC.swift */,
 				DBB30F7020B92ACF0023B308 /* TabBarController.swift */,
+				DBB30F7620B930960023B308 /* GenreVC.swift */,
+				DBB30F7820B930DE0023B308 /* SearchVC.swift */,
+				DBB30F7A20B931280023B308 /* MyPageVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,9 +316,12 @@
 				DBB30F7120B92ACF0023B308 /* TabBarController.swift in Sources */,
 				DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */,
 				DB9F562E20B920E00058ADBD /* StartVC.swift in Sources */,
+				DBB30F7720B930960023B308 /* GenreVC.swift in Sources */,
 				DBB30F6D20B928AA0023B308 /* ExUIViewController.swift in Sources */,
 				DBB30F7320B92ED00023B308 /* R.generated.swift in Sources */,
 				DBB30F6E20B928AA0023B308 /* ARPlaneAnchor+Visualize.swift in Sources */,
+				DBB30F7920B930DE0023B308 /* SearchVC.swift in Sources */,
+				DBB30F7B20B931280023B308 /* MyPageVC.swift in Sources */,
 				DBB30F7520B92FE30023B308 /* ExUIIMage.swift in Sources */,
 				DBB30F6B20B928AA0023B308 /* TrackingState+Desription.swift in Sources */,
 			);
