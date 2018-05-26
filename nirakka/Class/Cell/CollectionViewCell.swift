@@ -4,7 +4,7 @@ import Alamofire
 
 final class CollectionViewCell: UICollectionViewCell {
 
-    private var data = GameData()
+    private var data = TeamData()
 
     private let bgView: UIView = {
         let view = UIView()
@@ -26,6 +26,16 @@ final class CollectionViewCell: UICollectionViewCell {
         return label
     }()
 
+    private let prefectureLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = "聖光学院"
+        label.textColor = .white
+        label.font = UIFont(name: "NotoSansCJKjp-Medium", size: 15)
+        label.sizeToFit()
+        return label
+    }()
+    
     private let commentLabel: UILabel = {
         let label = UILabel()
         label.text = "金ください！"
@@ -45,9 +55,11 @@ final class CollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(data: GameData, isForFolder:Bool = false) {
+    func configure(data: TeamData, isForFolder:Bool = false) {
         self.data = data
-        self.teamLabel.text = data.comment
+        self.teamLabel.text = data.name
+        self.prefectureLabel.text = data.prefecture
+        self.commentLabel.text = String(data.sumMoney)+"円"
     }
 
     @objc private func didTapSaveButton() {
@@ -56,8 +68,9 @@ final class CollectionViewCell: UICollectionViewCell {
 
     private func setupViews() {
         contentView.addSubview(bgView)
-        bgView.addSubview(teamLabel)
-        bgView.addSubview(commentLabel)
+        bgView.addSubview(self.teamLabel)
+        bgView.addSubview(self.prefectureLabel)
+        bgView.addSubview(self.commentLabel)
 
         bgView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -65,6 +78,10 @@ final class CollectionViewCell: UICollectionViewCell {
         teamLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(-20)
+        }
+        prefectureLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview().offset(0)
         }
         commentLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
