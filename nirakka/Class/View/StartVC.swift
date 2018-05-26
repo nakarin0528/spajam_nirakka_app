@@ -1,6 +1,7 @@
 import UIKit
 import Material
 import SnapKit
+import TwitterKit
 
 final class StartVC: UIViewController {
 
@@ -31,7 +32,6 @@ final class StartVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.app.blue
-
         setupViews()
     }
 
@@ -56,8 +56,16 @@ final class StartVC: UIViewController {
     }
 
     @objc private func startDidTap() {
-        let tab = TabBarController.shared
-        present(tab, animated: true)
+        let twitterUtils = TwitterUtils()
+        twitterUtils.login(on: self){
+            
+            let tab = TabBarController.shared
+            self.present(tab, animated: true)
+        }
     }
+    
 }
 
+extension StartVC: TWTRComposerViewControllerDelegate{
+    
+}

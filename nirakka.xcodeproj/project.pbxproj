@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4277106E20B9DBE60082AEA3 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277106D20B9DBE60082AEA3 /* Twitter.swift */; };
+		4277106E20B9DBE60082AEA3 /* TwitterUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277106D20B9DBE60082AEA3 /* TwitterUtils.swift */; };
+		4277107020B9E8010082AEA3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4277106F20B9E8010082AEA3 /* SafariServices.framework */; };
 		93D916F6F53A85944C7CDBC6 /* Pods_nirakka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F3B6C71394106EACD93DA0 /* Pods_nirakka.framework */; };
 		DB9F561820B915390058ADBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F561720B915390058ADBD /* AppDelegate.swift */; };
 		DB9F562120B9153A0058ADBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9F562020B9153A0058ADBD /* Assets.xcassets */; };
@@ -44,7 +45,8 @@
 		08F3B6C71394106EACD93DA0 /* Pods_nirakka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nirakka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F5728E5DF2DD06AD14AD27 /* Pods-nirakka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nirakka.release.xcconfig"; path = "Pods/Target Support Files/Pods-nirakka/Pods-nirakka.release.xcconfig"; sourceTree = "<group>"; };
 		30E3CE219D359DDE423B74BC /* Pods-nirakka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nirakka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nirakka/Pods-nirakka.debug.xcconfig"; sourceTree = "<group>"; };
-		4277106D20B9DBE60082AEA3 /* Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
+		4277106D20B9DBE60082AEA3 /* TwitterUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUtils.swift; sourceTree = "<group>"; };
+		4277106F20B9E8010082AEA3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		DB9F561420B915390058ADBD /* nirakka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nirakka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9F561720B915390058ADBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB9F562020B9153A0058ADBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4277107020B9E8010082AEA3 /* SafariServices.framework in Frameworks */,
 				93D916F6F53A85944C7CDBC6 /* Pods_nirakka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +96,7 @@
 		4E8AE7CF665BE828DBF5F299 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4277106F20B9E8010082AEA3 /* SafariServices.framework */,
 				08F3B6C71394106EACD93DA0 /* Pods_nirakka.framework */,
 			);
 			name = Frameworks;
@@ -193,7 +197,7 @@
 				DBB30F8A20B941920023B308 /* iPhoneSize.swift */,
 				DBFC51C220B9C5CB0022F40B /* Constant.swift */,
 				DBFC51C420B9C6A30022F40B /* Log.swift */,
-				4277106D20B9DBE60082AEA3 /* Twitter.swift */,
+				4277106D20B9DBE60082AEA3 /* TwitterUtils.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -398,7 +402,7 @@
 				DB9F562E20B920E00058ADBD /* StartVC.swift in Sources */,
 				DBB30F9520B9458E0023B308 /* GameDataCell.swift in Sources */,
 				DBB30F7F20B93C480023B308 /* CollectionView.swift in Sources */,
-				4277106E20B9DBE60082AEA3 /* Twitter.swift in Sources */,
+				4277106E20B9DBE60082AEA3 /* TwitterUtils.swift in Sources */,
 				DBB30F8820B93F5D0023B308 /* TimeLineModel.swift in Sources */,
 				DBFC51C520B9C6A30022F40B /* Log.swift in Sources */,
 				DBB30F7720B930960023B308 /* TimeLineVC.swift in Sources */,

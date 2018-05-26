@@ -4,6 +4,21 @@ class TwitterUtils {
     
     let shareURL = "https://spajam.jp/"
     
+    func login(on viewController: UIViewController, completion: @escaping () -> Void) {
+        TWTRTwitter.sharedInstance().logIn(with: viewController) { (session, error) in
+            if let error = error {
+                completion()
+                return
+            }
+            if let session = session {
+                completion()
+                return
+            }
+            completion()
+        }
+    }
+    
+    
     func tweet(team: String, yen:Int, completion: @escaping () -> Void) {
         //ユーザー情報があるかどうか調べる
         if let userID = TWTRTwitter.sharedInstance().sessionStore.session()?.userID {
