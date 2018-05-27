@@ -56,9 +56,11 @@ final class TimeLineVC: UIViewController {
 
 extension TimeLineVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = GameDetailVC(data: self.model.timeLineData[indexPath.row])
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+        if self.model.timeLineData.isEmpty {
+            let vc = GameDetailVC(data: self.model.timeLineData[indexPath.row])
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
 }

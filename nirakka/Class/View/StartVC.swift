@@ -5,13 +5,16 @@ import TwitterKit
 
 final class StartVC: UIViewController {
 
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "タイトル"
-        label.font = .systemFont(ofSize: 18)
-        label.textColor = .white
-        label.sizeToFit()
-        return label
+    private let logoIV: UIImageView = {
+        let iv = UIImageView()
+        iv.image = R.image.logo()?.resize(toHeight: 70)
+        return iv
+    }()
+
+    private let iconIV: UIImageView = {
+        let iv = UIImageView()
+        iv.image = R.image.neko()
+        return iv
     }()
 
     private lazy var startBtn: FlatButton = {
@@ -40,8 +43,15 @@ final class StartVC: UIViewController {
     }
 
     private func setupViews() {
-        view.addSubview(titleLabel)
-        titleLabel.snp.makeConstraints {
+        view.addSubview(iconIV)
+        iconIV.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.height.equalTo(335)
+            $0.width.equalTo(267)
+        }
+
+        view.addSubview(logoIV)
+        logoIV.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalTo(screenSize().height/4)
         }
@@ -49,7 +59,7 @@ final class StartVC: UIViewController {
         view.addSubview(startBtn)
         startBtn.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.centerY.equalTo(screenSize().height/4 * 3)
+            $0.centerY.equalTo(screenSize().height/4 * 3.3)
             $0.width.equalTo(180)
             $0.height.equalTo(50)
         }

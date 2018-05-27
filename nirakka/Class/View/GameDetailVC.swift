@@ -110,7 +110,7 @@ final class GameDetailVC: UIViewController {
         tip.gameId = data.gameId
         tip.teamAId = data.teamA.id
         tip.teamBId = data.teamB.id
-        tip.money = 100
+        tip.money = 1000
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -126,12 +126,8 @@ final class GameDetailVC: UIViewController {
         setupViews()
     }
 
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//    }
 
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.isHidden = true
     }
@@ -231,10 +227,10 @@ final class GameDetailVC: UIViewController {
                 tip.teamId = tip.teamAId
                 self.model.fetchDatas(tip:self.tip, completion: { isTrue in
                 })
-                self.sumA += 100
+                self.sumA += 1000
                 teamAsum.text = String(self.sumA)+"円"
             }
-            self.twitterUtils.tweet(team: data.teamA.name, yen: 100)
+            self.twitterUtils.tweet(team: data.teamA.name, yen: 1000)
         } else {
             coinImageView.snp.remakeConstraints {
                 $0.centerX.equalTo(backDanboB)
@@ -242,10 +238,10 @@ final class GameDetailVC: UIViewController {
                 tip.teamId = tip.teamBId
                 self.model.fetchDatas(tip:self.tip, completion: { isTrue in
                 })
-                self.sumB += 100
+                self.sumB += 1000
                 teamBsum.text = String(self.sumB)+"円"
             }
-            self.twitterUtils.tweet(team: data.teamB.name, yen: 100)
+            self.twitterUtils.tweet(team: data.teamB.name, yen: 1000)
         }
         self.view.layoutIfNeeded()
         self.coinImageView.isHidden = false
