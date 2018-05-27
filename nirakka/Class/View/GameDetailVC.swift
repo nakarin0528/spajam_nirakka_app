@@ -204,7 +204,7 @@ final class GameDetailVC: UIViewController {
     }
     
     @objc private func btnDidTap(btn: UIButton) {
-        Alert.showAction(title: "決定", message: "Do you want to サポペイ？", action: { isSuccess in
+        Alert.showAction(title: "サポペイ？", message: "", action: { isSuccess in
             if isSuccess {
                 self.animation(btn)
                 // 決定した瞬間のバイブ
