@@ -2,7 +2,7 @@ import UIKit
 import SnapKit
 
 final class GameDataCell: UITableViewCell {
-
+    
     private var bgView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -132,7 +132,7 @@ final class GameDataCell: UITableViewCell {
         }
         timeLabel.snp.makeConstraints {
             $0.centerY.equalTo(placeLabel)
-            $0.right.equalTo(placeLabel.snp.left).offset(-15)
+            $0.right.equalTo(placeLabel.snp.left).offset(-35)
         }
         placeLabel.snp.makeConstraints {
             $0.bottom.equalToSuperview().inset(10)
@@ -155,7 +155,15 @@ final class GameDataCell: UITableViewCell {
     func configure(_ data: GameData) {
         teamLabel1.text = data.teamA.name
         teamLabel2.text = data.teamB.name
-        timeLabel.text = data.startTime
+        var timeL = data.startTime.split(separator: "-")
+        var jikan = timeL[2].split(separator: " ")
+        var kaishi = jikan[1].split(separator: ":")
+        
+//        let nen = timeL[0] + "年"
+        let getsu = timeL[1] + "月"
+        let nichi = jikan[0] + "日"
+        let kai = kaishi[0] + "時" + kaishi[1] + "分開始"
+        timeLabel.text = String(getsu) + String(nichi) + String(kai)
         placeLabel.text = data.place
         if data.isDone {
             timeLabel.isHidden = true
