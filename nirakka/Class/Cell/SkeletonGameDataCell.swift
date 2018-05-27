@@ -4,7 +4,7 @@ import Alamofire
 import AlamofireImage
 import SkeletonView
 
-final class SkeletonGameDataCell: UICollectionViewCell {
+final class SkeletonGameDataCell: UITableViewCell {
 
     private var bgView: UIView = {
         let view = UIView()
@@ -16,74 +16,39 @@ final class SkeletonGameDataCell: UICollectionViewCell {
         return view
     }()
 
-    private var teamLabel1: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
+    private var teamLabelView1: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 5
+        view.layer.masksToBounds = true
+        return view
     }()
 
-    private var teamLabel2: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.textAlignment = .center
-        return label
+    private var teamLabelView2: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 5
+        view.layer.masksToBounds = true
+        return view
     }()
 
-    private var vsLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 18)
-        label.textColor = .red
-        label.sizeToFit()
-        return label
+    private var vsLabelView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 5
+        view.layer.masksToBounds = true
+        return view
     }()
 
-    private var timeLabel: UILabel = {
-        let label = UILabel()
-        label.text = "8月3日 10:00~"
-        label.font = .systemFont(ofSize: 14)
-        label.sizeToFit()
-        return label
+    private var placeLabelView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 5
+        view.layer.masksToBounds = true
+        return view
     }()
 
-    private var placeLabel: UILabel = {
-        let label = UILabel()
-        label.text = ""
-        label.font = .systemFont(ofSize: 14)
-        label.sizeToFit()
-        return label
-    }()
 
-    private var scoreA: UILabel = {
-        let label = UILabel()
-        label.isHidden = true
-        label.sizeToFit()
-        label.font = .systemFont(ofSize: 12)
-        return label
-    }()
-
-    private var scoreB: UILabel = {
-        let label = UILabel()
-        label.isHidden = true
-        label.sizeToFit()
-        label.font = .systemFont(ofSize: 12)
-        return label
-    }()
-
-    private var scoreBar: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.text = "-"
-        label.isHidden = true
-        label.sizeToFit()
-        label.font = .systemFont(ofSize: 12)
-        return label
-    }()
-
-    override init(frame _: CGRect) {
-        super.init(frame: .zero)
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         //        contentView.backgroundColor = .white
+        backgroundColor = .clear
         self.setupViews()
         showSkeleton()
     }
@@ -94,52 +59,38 @@ final class SkeletonGameDataCell: UICollectionViewCell {
 
     func setupViews() {
         contentView.addSubview(bgView)
-        bgView.addSubview(teamLabel1)
-        bgView.addSubview(vsLabel)
-        bgView.addSubview(teamLabel2)
-        bgView.addSubview(timeLabel)
-        bgView.addSubview(placeLabel)
-        bgView.addSubview(scoreA)
-        bgView.addSubview(scoreBar)
-        bgView.addSubview(scoreB)
+        bgView.addSubview(teamLabelView1)
+        bgView.addSubview(vsLabelView)
+        bgView.addSubview(teamLabelView2)
+        bgView.addSubview(placeLabelView)
 
         bgView.snp.makeConstraints {
             $0.top.bottom.equalToSuperview().inset(10)
             $0.left.right.equalToSuperview().inset(20)
         }
-        teamLabel1.snp.makeConstraints {
-            $0.left.equalToSuperview().inset(20)
+        teamLabelView1.snp.makeConstraints {
             $0.top.bottom.equalToSuperview().inset(30)
-            $0.right.equalTo(vsLabel.snp.left).offset(-10)
+            $0.right.equalTo(vsLabelView.snp.left).offset(-15)
+            $0.height.equalTo(20)
+            $0.width.equalTo(80)
         }
-        vsLabel.snp.makeConstraints {
+        vsLabelView.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(10)
+            $0.height.equalTo(15)
+            $0.width.equalTo(40)
         }
-        teamLabel2.snp.makeConstraints {
-            $0.right.equalToSuperview().inset(20)
+        teamLabelView2.snp.makeConstraints {
             $0.top.bottom.equalToSuperview().inset(30)
-            $0.left.equalTo(vsLabel.snp.right).offset(10)
+            $0.left.equalTo(vsLabelView.snp.right).offset(15)
+            $0.height.equalTo(20)
+            $0.width.equalTo(80)
         }
-        timeLabel.snp.makeConstraints {
-            $0.centerY.equalTo(placeLabel)
-            $0.right.equalTo(placeLabel.snp.left).offset(-15)
-        }
-        placeLabel.snp.makeConstraints {
-            $0.bottom.equalToSuperview().inset(10)
+        placeLabelView.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(5)
             $0.right.equalToSuperview().inset(15)
-        }
-        scoreBar.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.bottom.equalTo(vsLabel.snp.top).offset(-10)
-        }
-        scoreA.snp.makeConstraints {
-            $0.centerY.equalTo(scoreBar)
-            $0.right.equalTo(scoreBar.snp.left).offset(-5)
-        }
-        scoreB.snp.makeConstraints {
-            $0.centerY.equalTo(scoreBar)
-            $0.left.equalTo(scoreBar.snp.right).offset(5)
+            $0.height.equalTo(15)
+            $0.width.equalTo(80)
         }
     }
 

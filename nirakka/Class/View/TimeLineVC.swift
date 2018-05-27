@@ -5,12 +5,12 @@ final class TimeLineVC: UIViewController {
 
     let model = TimeLineModel()
 
-    private var isFirstFetched = false
+    private var isFirstFetched = true
 
     private lazy var tableView: UITableView = {
         let table = UITableView()
         table.register(GameDataCell.self, forCellReuseIdentifier: "GameDataCell")
-//        table.register(SkeletonCell.self, forCellReuseIdentifier: "SkeletonCell")
+        table.register(SkeletonGameDataCell.self, forCellReuseIdentifier: "SkeletonGameDataCell")
         table.estimatedRowHeight = 120
         table.rowHeight = UITableViewAutomaticDimension
         table.tableFooterView = UIView()
@@ -25,20 +25,14 @@ final class TimeLineVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
-
+        tableView.reloadData()
         setupViews()
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
         self.refetch()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
-        
-        setupViews()
-        
-        self.refetch()
-    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -71,6 +65,10 @@ extension TimeLineVC: UITableViewDelegate {
 
 extension TimeLineVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if self.model.timeLineData.count == 0 {
+            let skeletonCell = tableView.dequeueReusableCell(withIdentifier: "SkeletonGameDataCell") as! SkeletonGameDataCell
+            return skeletonCell
+        }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameDataCell") as? GameDataCell ?? GameDataCell()
         cell.configure(self.model.timeLineData[indexPath.row])
@@ -80,7 +78,10 @@ extension TimeLineVC: UITableViewDataSource {
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection _: Int) -> Int {
-        // ローディング用の処理追加する todo
+        // ローディング用
+        if self.model.timeLineData.count == 0 && self.isFirstFetched {
+            return 8
+        }
 
         return self.model.timeLineData.count
     }

@@ -130,8 +130,8 @@ final class GameDetailVC: UIViewController {
 //        super.viewWillAppear(animated)
 //
 //    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
+
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.isHidden = true
     }
